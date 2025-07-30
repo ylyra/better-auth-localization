@@ -1,8 +1,8 @@
 import type { Auth } from "better-auth";
-import { defaultTranslations } from "../translations";
+import type { defaultTranslations } from "../translations";
 
 type Prettify<T> = {
-  [K in keyof T]: T[K];
+	[K in keyof T]: T[K];
 } & {};
 
 export type ErrorCodesType = Auth["$ERROR_CODES"];
@@ -23,39 +23,47 @@ export type ExtractCustomLocales<T> = T extends Record<infer K, any>
 	? Exclude<K, BuiltInLocales>
 	: never;
 
-export type AvailableLocales<TCustomTranslations> = BuiltInLocales | ExtractCustomLocales<TCustomTranslations>;
-export type PrettifiedAvailableLocales<TCustomTranslations> = Prettify<BuiltInLocales | ExtractCustomLocales<TCustomTranslations>>;
+export type AvailableLocales<TCustomTranslations> =
+	| BuiltInLocales
+	| ExtractCustomLocales<TCustomTranslations>;
+export type PrettifiedAvailableLocales<TCustomTranslations> = Prettify<
+	BuiltInLocales | ExtractCustomLocales<TCustomTranslations>
+>;
 
-export type Translations<TCustomTranslations extends Record<string, PartialErrorCodesType> = {}> = {
-		[K in BuiltInLocales]?: PartialErrorCodesType;
-	} & TCustomTranslations;
+export type Translations<
+	TCustomTranslations extends Record<string, PartialErrorCodesType> = {},
+> = {
+	[K in BuiltInLocales | keyof TCustomTranslations]?: PartialErrorCodesType;
+} & TCustomTranslations;
 /**
  * Options for the localization plugin
  */
-export type LocalizationOptions<TCustomTranslations extends Record<string, PartialErrorCodesType> = {}> = {
+export type LocalizationOptions<
+	TCustomTranslations extends Record<string, PartialErrorCodesType> = {},
+> = {
 	/**
-			 * Optional translation mappings
-			 * Can override built-in translations or add custom locales
-			 *
-			 * @example Override built-in translations
-			 * ```typescript
-			 * translations: {
-			 *   "pt-BR": { USER_NOT_FOUND: "Mensagem customizada" }
-			 * }
-			 * ```
-			 */
+	 * Optional translation mappings
+	 * Can override built-in translations or add custom locales
+	 *
+	 * @example Override built-in translations
+	 * ```typescript
+	 * translations: {
+	 *   "pt-BR": { USER_NOT_FOUND: "Mensagem customizada" }
+	 * }
+	 * ```
+	 */
 	translations?: Translations<TCustomTranslations>;
-		/**
-			 * The default locale to use for translations
-			 * When using a built-in locale, translations are optional since defaults exist
-			 */
+	/**
+	 * The default locale to use for translations
+	 * When using a built-in locale, translations are optional since defaults exist
+	 */
 	defaultLocale: Prettify<PrettifiedAvailableLocales<TCustomTranslations>>;
-		/**
+	/**
 	 * Fallback locale when translation is not found
 	 * @default "default"
 	 */
 	fallbackLocale?: Prettify<PrettifiedAvailableLocales<TCustomTranslations>>;
-		/**
+	/**
 	 * Function to determine locale from request
 	 * Can be async and should return a valid locale string
 	 *
@@ -67,6 +75,9 @@ export type LocalizationOptions<TCustomTranslations extends Record<string, Parti
 	 * getLocale: (request) => request.headers.get('accept-language')?.split(',')[0] || 'en'
 	 * ```
 	 */
-	getLocale?: (request: Request) => Prettify<PrettifiedAvailableLocales<TCustomTranslations>> | Promise<Prettify<PrettifiedAvailableLocales<TCustomTranslations>>>;
-}
-		
+	getLocale?: (
+		request: Request,
+	) =>
+		| Prettify<PrettifiedAvailableLocales<TCustomTranslations>>
+		| Promise<Prettify<PrettifiedAvailableLocales<TCustomTranslations>>>;
+};

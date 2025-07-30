@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 1.2.5
+
+### Patch Changes
+
+- translation type missing error codes on custom locale
+
 ## 1.2.4
 
 ### Patch Changes
