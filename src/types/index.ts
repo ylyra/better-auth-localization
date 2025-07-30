@@ -12,31 +12,24 @@ export type PartialErrorCodesType = Partial<ErrorCodesType>;
  */
 export type BuiltInLocales = keyof typeof defaultTranslations | "default";
 
-export type ExtractCustomLocales<T> = T extends Record<infer K, unknown>
+/**
+ * Extract custom locales from a translations object
+ */
+export type ExtractCustomLocales<T> = T extends Record<infer K, any>
 	? Exclude<K, BuiltInLocales>
 	: never;
 
-type TranslationsWithAutocomplete<T extends Record<string, unknown>> =
-	T extends Record<string, PartialErrorCodesType> ? T : never;
+export type AvailableLocales<TCustomTranslations> = BuiltInLocales | ExtractCustomLocales<TCustomTranslations>;
 
-export type SuggestedTranslations<
-	TCustomTranslations extends Record<string, unknown>,
-> = TranslationsWithAutocomplete<TCustomTranslations> & {
-	[K in BuiltInLocales]?: PartialErrorCodesType;
-} & {
-	[K in ExtractCustomLocales<TCustomTranslations>]: PartialErrorCodesType;
-};
 
-export type LocaleProps<
-	TCustomTranslations extends Record<string, PartialErrorCodesType>,
-> =
-	| {
-			/**
-			 * The default locale to use for translations
-			 * When using a built-in locale, translations are optional since defaults exist
-			 */
-			defaultLocale: BuiltInLocales;
-			/**
+export type Translations<TCustomTranslations extends Record<string, PartialErrorCodesType> = {}> = {
+		[K in BuiltInLocales]?: PartialErrorCodesType;
+	} & TCustomTranslations;
+/**
+ * Options for the localization plugin
+ */
+export type LocalizationOptions<TCustomTranslations extends Record<string, PartialErrorCodesType> = {}> = {
+	/**
 			 * Optional translation mappings
 			 * Can override built-in translations or add custom locales
 			 *
@@ -47,40 +40,18 @@ export type LocaleProps<
 			 * }
 			 * ```
 			 */
-			translations?: SuggestedTranslations<TCustomTranslations>;
-	  }
-	| {
-			/**
+	translations?: Translations<TCustomTranslations>;
+		/**
 			 * The default locale to use for translations
-			 * When using a custom locale, translations must be provided
+			 * When using a built-in locale, translations are optional since defaults exist
 			 */
-			defaultLocale: ExtractCustomLocales<TCustomTranslations>;
-			/**
-			 * Required translation mappings for custom locales
-			 * Must include translations for the custom defaultLocale at minimum
-			 *
-			 * @example Custom locale with translations
-			 * ```typescript
-			 * translations: {
-			 *   "fr": {
-			 *     USER_NOT_FOUND: "Utilisateur non trouvé",
-			 *     INVALID_PASSWORD: "Mot de passe invalide"
-			 *   }
-			 * }
-			 * ```
-			 */
-			translations: SuggestedTranslations<TCustomTranslations>;
-	  };
-
-export type ExtraProps<
-	TCustomTranslations extends Record<string, PartialErrorCodesType>,
-> = {
-	/**
+	defaultLocale: AvailableLocales<TCustomTranslations>;
+		/**
 	 * Fallback locale when translation is not found
 	 * @default "default"
 	 */
-	fallbackLocale?: BuiltInLocales | ExtractCustomLocales<TCustomTranslations>;
-	/**
+	fallbackLocale?: AvailableLocales<TCustomTranslations>;
+		/**
 	 * Function to determine locale from request
 	 * Can be async and should return a valid locale string
 	 *
@@ -92,14 +63,6 @@ export type ExtraProps<
 	 * getLocale: (request) => request.headers.get('accept-language')?.split(',')[0] || 'en'
 	 * ```
 	 */
-	getLocale?: (
-		request: Request,
-	) =>
-		| BuiltInLocales
-		| ExtractCustomLocales<TCustomTranslations>
-		| Promise<BuiltInLocales | ExtractCustomLocales<TCustomTranslations>>;
-};
-
-export type LocalizationOptions<
-	TCustomTranslations extends Record<string, PartialErrorCodesType>,
-> = LocaleProps<TCustomTranslations> & ExtraProps<TCustomTranslations>;
+	getLocale?: (request: Request) => AvailableLocales<TCustomTranslations> | Promise<AvailableLocales<TCustomTranslations>>;
+}
+		

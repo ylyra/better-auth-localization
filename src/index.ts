@@ -1,9 +1,9 @@
-import { BetterAuthPlugin, Auth } from "better-auth";
+import { BetterAuthPlugin } from "better-auth";
 import { createAuthMiddleware } from "better-auth/plugins";
 import {
-	BuiltInLocales,
 	LocalizationOptions,
 	PartialErrorCodesType,
+	Translations,
 } from "./types";
 import { getTranslation } from "./utils/translations";
 import { hasBody, isErrorBody } from "./utils/helpers";
@@ -55,13 +55,9 @@ import { defaultTranslations } from "./translations";
  * ```
  */
 export const betterAuthLocalization = <
-	TCustomTranslations extends Record<string, PartialErrorCodesType>,
+	TCustomTranslations extends Record<string, PartialErrorCodesType> = {},
 >(
-	options: LocalizationOptions<
-		TCustomTranslations extends Record<string, PartialErrorCodesType>
-			? TCustomTranslations
-			: never
-	>,
+	options: LocalizationOptions<TCustomTranslations>,
 ) => {
 	const {
 		defaultLocale = "default",
@@ -73,10 +69,7 @@ export const betterAuthLocalization = <
 	const mergedTranslations = {
 		...defaultTranslations,
 		...translations,
-	} as Record<
-		BuiltInLocales | keyof TCustomTranslations,
-		PartialErrorCodesType
-	>;
+	} as Translations<TCustomTranslations>;
 
 	const resolveLocale = getLocale
 		? async (request: Request) => {
@@ -146,8 +139,7 @@ export type {
 	LocalizationOptions,
 	BuiltInLocales,
 	PartialErrorCodesType,
-	SuggestedTranslations,
-  ExtractCustomLocales,
-  LocaleProps,
-  ExtraProps,
+	AvailableLocales,
+	ExtractCustomLocales,
+	ErrorCodesType
 } from "./types";

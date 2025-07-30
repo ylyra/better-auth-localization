@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 1.2.3
+
+### Patch Changes
+
+- Type fixes for better DX
+
 ## 1.2.2
 
 ### Patch Changes
