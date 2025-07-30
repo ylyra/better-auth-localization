@@ -1,6 +1,6 @@
 {
 	"name": "better-localization",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"author": "Marcel Losso",
 	"description": "Better Localization - A custom plugin for better-auth that allows you to localize your error messages.",
 	"main": "dist/index.js",
@@ -8,26 +8,26 @@
 	"types": "dist/index.d.ts",
 	"files": [
 		"dist",
-    "LICENSE.md",
-    "README.md"
+		"LICENSE.md",
+		"README.md"
 	],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
-  },
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		}
+	},
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
 		"test": "vitest",
-    "test:ci": "vitest run",
+		"test:ci": "vitest run",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
 		"format": "biome format --write .",
 		"tsc": "tsc --noEmit",
-    "release": "pnpm build && changeset publish"
+		"release": "pnpm build && changeset publish"
 	},
 	"keywords": [
 		"better-auth",
