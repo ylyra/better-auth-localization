@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 1.2.1
+
+### Patch Changes
+
+- Changes in readme to show which languages are supported
+
 ## 1.2.0
 
 ### Minor Changes

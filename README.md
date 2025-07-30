@@ -11,6 +11,12 @@ A localization plugin for [Better Auth](https://github.com/better-auth/better-au
 - 🔧 **Flexible locale detection** - Support for custom locale resolution from headers, cookies, or databases
 - ⚡ **Zero runtime overhead** - Translations are bundled at build time
 
+### Language Support Status
+
+Currently supported languages:
+- 🇧🇷 **Portuguese (pt-BR)** - ✅ Complete
+- 🇪🇸 **Spanish (es)** - 🚧 Work in Progress
+
 ## Installation
 
 ```bash
@@ -119,12 +125,13 @@ The plugin comes with built-in translations for all Better Auth error codes:
 - Social authentication errors
 - Account management errors
 
-
 For a complete and specific list, refer to the Better Auth documentation.
 
 ## Contributing
 
-We welcome contributions! To add a new language:
+We welcome and appreciate contributions! Help us expand language support by adding new translations.
+
+To add a new language:
 
 1. Create a new translation file in `src/utils/translations/`
 2. Add all error code translations
