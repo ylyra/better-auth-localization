@@ -1,19 +1,17 @@
 import type {
-	BuiltInLocales,
+	AvailableLocales,
 	ErrorCodesType,
 	PartialErrorCodesType,
+	Translations,
 } from "../types";
 
 export const getTranslation = <
 	TCustomTranslations extends Record<string, PartialErrorCodesType>,
 >(
 	code: keyof ErrorCodesType,
-	locale: BuiltInLocales | keyof TCustomTranslations,
-	fallbackLocale: BuiltInLocales | keyof TCustomTranslations,
-	mergedTranslations: Record<
-		BuiltInLocales | keyof TCustomTranslations,
-		PartialErrorCodesType
-	>,
+	locale: AvailableLocales<TCustomTranslations>,
+	fallbackLocale: AvailableLocales<TCustomTranslations>,
+	mergedTranslations: Translations<TCustomTranslations>,
 	originalMessage?: string,
 ) => {
 	if (locale === "default") return originalMessage || code;

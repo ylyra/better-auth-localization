@@ -1,6 +1,7 @@
 import { BetterAuthPlugin } from "better-auth";
 import { createAuthMiddleware } from "better-auth/plugins";
 import {
+	AvailableLocales,
 	LocalizationOptions,
 	PartialErrorCodesType,
 	Translations,
@@ -66,6 +67,9 @@ export const betterAuthLocalization = <
 		getLocale,
 	} = options;
 
+	const currLocale = defaultLocale as AvailableLocales<TCustomTranslations>;
+	const currFallbackLocale = fallbackLocale as AvailableLocales<TCustomTranslations>;
+
 	const mergedTranslations = {
 		...defaultTranslations,
 		...translations,
@@ -74,7 +78,7 @@ export const betterAuthLocalization = <
 	const resolveLocale = getLocale
 		? async (request: Request) => {
 				try {
-					const locale = await getLocale(request);
+					const locale = await getLocale(request) as AvailableLocales<TCustomTranslations>;
 					if (locale in mergedTranslations || locale === "default") {
 						return locale;
 					}
@@ -86,15 +90,15 @@ export const betterAuthLocalization = <
 							)}. ` +
 							`Falling back to "${defaultLocale}"`,
 					);
-					return defaultLocale;
+					return currLocale;
 				} catch (error) {
 					console.error(
 						`[better-auth-localization] Error resolving locale: ${error}`,
 					);
-					return defaultLocale;
+					return currLocale;
 				}
 			}
-		: () => defaultLocale;
+		: () => currLocale;
 
 	return {
 		id: "better-auth-localization",
@@ -120,7 +124,7 @@ export const betterAuthLocalization = <
 						const translatedMessage = getTranslation(
 							body.code,
 							locale,
-							fallbackLocale,
+							currFallbackLocale,
 							mergedTranslations,
 							body.message,
 						);

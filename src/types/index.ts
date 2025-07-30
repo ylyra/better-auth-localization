@@ -1,6 +1,10 @@
 import type { Auth } from "better-auth";
 import { defaultTranslations } from "../translations";
 
+type Prettify<T> = {
+  [K in keyof T]: T[K];
+} & {};
+
 export type ErrorCodesType = Auth["$ERROR_CODES"];
 /**
  * Partial better-auth error codes type for translations
@@ -20,7 +24,7 @@ export type ExtractCustomLocales<T> = T extends Record<infer K, any>
 	: never;
 
 export type AvailableLocales<TCustomTranslations> = BuiltInLocales | ExtractCustomLocales<TCustomTranslations>;
-
+export type PrettifiedAvailableLocales<TCustomTranslations> = Prettify<BuiltInLocales | ExtractCustomLocales<TCustomTranslations>>;
 
 export type Translations<TCustomTranslations extends Record<string, PartialErrorCodesType> = {}> = {
 		[K in BuiltInLocales]?: PartialErrorCodesType;
@@ -45,12 +49,12 @@ export type LocalizationOptions<TCustomTranslations extends Record<string, Parti
 			 * The default locale to use for translations
 			 * When using a built-in locale, translations are optional since defaults exist
 			 */
-	defaultLocale: AvailableLocales<TCustomTranslations>;
+	defaultLocale: Prettify<PrettifiedAvailableLocales<TCustomTranslations>>;
 		/**
 	 * Fallback locale when translation is not found
 	 * @default "default"
 	 */
-	fallbackLocale?: AvailableLocales<TCustomTranslations>;
+	fallbackLocale?: Prettify<PrettifiedAvailableLocales<TCustomTranslations>>;
 		/**
 	 * Function to determine locale from request
 	 * Can be async and should return a valid locale string
@@ -63,6 +67,6 @@ export type LocalizationOptions<TCustomTranslations extends Record<string, Parti
 	 * getLocale: (request) => request.headers.get('accept-language')?.split(',')[0] || 'en'
 	 * ```
 	 */
-	getLocale?: (request: Request) => AvailableLocales<TCustomTranslations> | Promise<AvailableLocales<TCustomTranslations>>;
+	getLocale?: (request: Request) => Prettify<PrettifiedAvailableLocales<TCustomTranslations>> | Promise<Prettify<PrettifiedAvailableLocales<TCustomTranslations>>>;
 }
 		
