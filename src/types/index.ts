@@ -12,7 +12,7 @@ export type PartialErrorCodesType = Partial<ErrorCodesType>;
  */
 export type BuiltInLocales = keyof typeof defaultTranslations | "default";
 
-type ExtractCustomLocales<T> = T extends Record<infer K, unknown>
+export type ExtractCustomLocales<T> = T extends Record<infer K, unknown>
 	? Exclude<K, BuiltInLocales>
 	: never;
 

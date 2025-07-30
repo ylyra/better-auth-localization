@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 1.2.2
+
+### Patch Changes
+
+- Missing some types when exporting them
+
 ## 1.2.1
 
 ### Patch Changes

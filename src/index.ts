@@ -146,4 +146,8 @@ export type {
 	LocalizationOptions,
 	BuiltInLocales,
 	PartialErrorCodesType,
+	SuggestedTranslations,
+  ExtractCustomLocales,
+  LocaleProps,
+  ExtraProps,
 } from "./types";
