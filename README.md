@@ -15,7 +15,7 @@ A localization plugin for [Better Auth](https://github.com/better-auth/better-au
 
 Currently supported languages:
 - 🇧🇷 **Portuguese (pt-BR)** - ✅ Complete
-- 🇪🇸 **Spanish (es)** - 🚧 Work in Progress
+- 🇪🇸 **Spanish (es-ES)** - ✅ Complete
 
 ## Installation
 
