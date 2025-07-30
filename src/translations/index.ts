@@ -39,3 +39,7 @@ export const PT_BR = {
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Você não pode desvincular sua última conta",
 	ACCOUNT_NOT_FOUND: "Conta não encontrada",
 } satisfies ErrorCodesType;
+
+export const defaultTranslations = {
+	"pt-BR": PT_BR,
+};

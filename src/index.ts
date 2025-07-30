@@ -5,8 +5,9 @@ import {
 	LocalizationOptions,
 	PartialErrorCodesType,
 } from "./types";
-import { defaultTranslations, getTranslation } from "./utils/translations";
+import { getTranslation } from "./utils/translations";
 import { hasBody, isErrorBody } from "./utils/helpers";
+import { defaultTranslations } from "./translations";
 
 /**
  * Better Auth localization plugin
@@ -84,7 +85,7 @@ export const betterLocalization = <
 					if (locale in mergedTranslations || locale === "default") {
 						return locale;
 					}
-          
+
 					console.warn(
 						`[better-localization] Locale "${locale}" not found in translations. ` +
 							`Available locales: ${Object.keys(mergedTranslations).join(

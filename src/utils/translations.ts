@@ -1,16 +1,8 @@
-import { PT_BR } from "../translations";
 import type {
 	BuiltInLocales,
 	ErrorCodesType,
 	PartialErrorCodesType,
 } from "../types";
-
-export const defaultTranslations: Record<
-	Exclude<BuiltInLocales, "default">,
-	ErrorCodesType
-> = {
-	"pt-BR": PT_BR,
-};
 
 export const getTranslation = <
 	TCustomTranslations extends Record<string, PartialErrorCodesType>,

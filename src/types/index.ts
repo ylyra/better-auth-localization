@@ -1,4 +1,5 @@
 import type { Auth } from "better-auth";
+import { defaultTranslations } from "../translations";
 
 export type ErrorCodesType = Auth["$ERROR_CODES"];
 /**
@@ -8,9 +9,8 @@ export type PartialErrorCodesType = Partial<ErrorCodesType>;
 
 /**
  * Built-in locales supported by the plugin.
- * Available options: "pt-BR" | "default"
  */
-export type BuiltInLocales = "pt-BR" | "default";
+export type BuiltInLocales = keyof typeof defaultTranslations | "default";
 
 type ExtractCustomLocales<T> = T extends Record<infer K, unknown>
 	? Exclude<K, BuiltInLocales>
