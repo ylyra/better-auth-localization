@@ -8,6 +8,51 @@ import {
 import { defaultTranslations, getTranslation } from "./utils/translations";
 import { hasBody, isErrorBody } from "./utils/helpers";
 
+/**
+ * Better Auth localization plugin
+ *
+ * @param options - The options for the plugin
+ * @param options.defaultLocale - Default locale to use (available options: "default" | "pt-BR").
+ * @param options.fallbackLocale - Fallback locale to use when the locale is not found in the translations. Default: "default"
+ * @param options.translations - Add custom locales or override the current translations
+ * @param options.getLocale - Function to get the locale from a request
+ *
+ * @example
+ * ```typescript
+ * betterLocalization({
+ *   defaultLocale: "pt-BR",
+ *   fallbackLocale: "default"
+ * })
+ * ```
+ *
+ * @example
+ * ```typescript
+ * betterLocalization({
+ *   defaultLocale: "es-ES",
+ *   fallbackLocale: "default",
+ *   translations: {
+ *     "es-ES": {
+ *       USER_NOT_FOUND: "Usuario no encontrado",
+ *     },
+ *     "pt-BR": {
+ *       USER_NOT_FOUND: "Overwrite the available pt-BR translation",
+ *     }
+ *   }
+ * })
+ * ```
+ *
+ * @example Dynamic locale detection
+ * ```typescript
+ * betterLocalization({
+ *   defaultLocale: "pt-BR",
+ *   fallbackLocale: "default",
+ *   getLocale: async (request) => {
+ *     // Get from cookie, header, or database
+ *     return request.headers.get('x-locale') || 'pt-BR';
+ *   }
+ * })
+ * ```
+ */
 export const betterLocalization = <
 	TCustomTranslations extends Record<string, PartialErrorCodesType>,
 >(
@@ -36,10 +81,10 @@ export const betterLocalization = <
 		? async (request: Request) => {
 				try {
 					const locale = await getLocale(request);
-					// Validate locale exists in our translations
 					if (locale in mergedTranslations || locale === "default") {
 						return locale;
 					}
+          
 					console.warn(
 						`[better-localization] Locale "${locale}" not found in translations. ` +
 							`Available locales: ${Object.keys(mergedTranslations).join(
@@ -95,3 +140,9 @@ export const betterLocalization = <
 		},
 	} satisfies BetterAuthPlugin;
 };
+
+export type {
+	LocalizationOptions,
+	BuiltInLocales,
+	PartialErrorCodesType,
+} from "./types";
