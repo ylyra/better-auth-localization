@@ -20,7 +20,7 @@ import { defaultTranslations } from "./translations";
  *
  * @example
  * ```typescript
- * betterLocalization({
+ * betterAuthLocalization({
  *   defaultLocale: "pt-BR",
  *   fallbackLocale: "default"
  * })
@@ -28,7 +28,7 @@ import { defaultTranslations } from "./translations";
  *
  * @example
  * ```typescript
- * betterLocalization({
+ * betterLocalbetterAuthLocalizationization({
  *   defaultLocale: "es-ES",
  *   fallbackLocale: "default",
  *   translations: {
@@ -44,7 +44,7 @@ import { defaultTranslations } from "./translations";
  *
  * @example Dynamic locale detection
  * ```typescript
- * betterLocalization({
+ * betterAuthLocalization({
  *   defaultLocale: "pt-BR",
  *   fallbackLocale: "default",
  *   getLocale: async (request) => {
@@ -54,7 +54,7 @@ import { defaultTranslations } from "./translations";
  * })
  * ```
  */
-export const betterLocalization = <
+export const betterAuthLocalization = <
 	TCustomTranslations extends Record<string, PartialErrorCodesType>,
 >(
 	options: LocalizationOptions<
@@ -87,7 +87,7 @@ export const betterLocalization = <
 					}
 
 					console.warn(
-						`[better-localization] Locale "${locale}" not found in translations. ` +
+						`[better-auth-localization] Locale "${locale}" not found in translations. ` +
 							`Available locales: ${Object.keys(mergedTranslations).join(
 								", ",
 							)}. ` +
@@ -96,7 +96,7 @@ export const betterLocalization = <
 					return defaultLocale;
 				} catch (error) {
 					console.error(
-						`[better-localization] Error resolving locale: ${error}`,
+						`[better-auth-localization] Error resolving locale: ${error}`,
 					);
 					return defaultLocale;
 				}
@@ -104,7 +104,7 @@ export const betterLocalization = <
 		: () => defaultLocale;
 
 	return {
-		id: "better-localization",
+		id: "better-auth-localization",
 		hooks: {
 			after: [
 				{

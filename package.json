@@ -1,8 +1,8 @@
 {
-	"name": "better-localization",
-	"version": "1.1.0",
+	"name": "better-auth-localization",
+	"version": "1.2.0",
 	"author": "Marcel Losso",
-	"description": "Better Localization - A custom plugin for better-auth that allows you to localize your error messages.",
+	"description": " A custom plugin for better-auth that allows you to localize your error messages.",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -32,6 +32,7 @@
 	"keywords": [
 		"better-auth",
 		"better-localization",
+		"better-auth-localization",
 		"localization",
 		"i18n",
 		"internationalization",
@@ -40,13 +41,13 @@
 		"locale"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/marcel-losso/better-localization",
+	"homepage": "https://github.com/marcel-losso/better-auth-localization",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/marcel-losso/better-localization.git"
+		"url": "https://github.com/marcel-losso/better-auth-localization.git"
 	},
 	"bugs": {
-		"url": "https://github.com/marcel-losso/better-localization/issues"
+		"url": "https://github.com/marcel-losso/better-auth-localization/issues"
 	},
 	"packageManager": "pnpm@10.13.1",
 	"devDependencies": {

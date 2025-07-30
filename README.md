@@ -27,12 +27,12 @@ pnpm add better-auth-localization
 
 ```typescript
 import { betterAuth } from "better-auth";
-import { betterLocalization } from "better-auth-localization";
+import { betterAuthLocalization } from "better-auth-localization";
 
 export const auth = betterAuth({
   // ... your config
   plugins: [
-    betterLocalization({
+    betterAuthLocalization({
       defaultLocale: "pt-BR", // Use built-in Portuguese translations
       fallbackLocale: "default" // Fallback to English
     })
@@ -43,7 +43,7 @@ export const auth = betterAuth({
 ### Dynamic Locale Detection
 
 ```typescript
-betterLocalization({
+betterAuthLocalization({
   defaultLocale: "pt-BR",
   fallbackLocale: "default",
   getLocale: async (request) => {
@@ -72,7 +72,7 @@ async function getUserLocale(request: Request): Promise<string | null> {
 ### Custom Translations
 
 ```typescript
-betterLocalization({
+betterAuthLocalization({
   defaultLocale: "fr",
   fallbackLocale: "pt-BR", // Can also use built-in locales as fallback
   translations: {
@@ -95,7 +95,7 @@ betterLocalization({
 ### Overriding Built-in Translations
 
 ```typescript
-betterLocalization({
+betterAuthLocalization({
   defaultLocale: "pt-BR",
   translations: {
     "pt-BR": {
