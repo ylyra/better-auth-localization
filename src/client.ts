@@ -1,11 +1,11 @@
 import type { BetterAuthClientPlugin } from "better-auth";
-import type { betterAuthLocalization } from "./index";
+import type { localization } from "./index";
 
-type BetterAuthLocalizationPlugin = typeof betterAuthLocalization;
+type BetterAuthLocalizationPlugin = typeof localization;
 
 export const betterAuthLocalizationClientPlugin = () => {
 	return {
-		id: "betterAuthLocalization",
+		id: "localization",
 		$InferServerPlugin: {} as ReturnType<BetterAuthLocalizationPlugin>,
 	} satisfies BetterAuthClientPlugin;
 };

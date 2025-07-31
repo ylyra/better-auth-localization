@@ -15,7 +15,9 @@ A localization plugin for [Better Auth](https://github.com/better-auth/better-au
 
 Currently supported languages:
 - 🇧🇷 **Portuguese (pt-BR)** - ✅ Complete
+- 🇵🇹 **Portuguese (pt-PT)** - ✅ Complete
 - 🇪🇸 **Spanish (es-ES)** - ✅ Complete
+- 🇫🇷 **French (fr-FR)** - ✅ Complete
 
 ## Installation
 
@@ -33,12 +35,12 @@ pnpm add better-auth-localization
 
 ```typescript
 import { betterAuth } from "better-auth";
-import { betterAuthLocalization } from "better-auth-localization";
+import { localization } from "better-auth-localization";
 
 export const auth = betterAuth({
   // ... your config
   plugins: [
-    betterAuthLocalization({
+    localization({
       defaultLocale: "pt-BR", // Use built-in Portuguese translations
       fallbackLocale: "default" // Fallback to English
     })
@@ -49,7 +51,7 @@ export const auth = betterAuth({
 ### Dynamic Locale Detection
 
 ```typescript
-betterAuthLocalization({
+localization({
   defaultLocale: "pt-BR",
   fallbackLocale: "default",
   getLocale: async (request) => {
@@ -78,7 +80,7 @@ async function getUserLocale(request: Request): Promise<string | null> {
 ### Custom Translations
 
 ```typescript
-betterAuthLocalization({
+localization({
   defaultLocale: "fr",
   fallbackLocale: "pt-BR", // Can also use built-in locales as fallback
   translations: {
@@ -101,7 +103,7 @@ betterAuthLocalization({
 ### Overriding Built-in Translations
 
 ```typescript
-betterAuthLocalization({
+localization({
   defaultLocale: "pt-BR",
   translations: {
     "pt-BR": {

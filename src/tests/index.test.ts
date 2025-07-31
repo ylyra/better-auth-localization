@@ -1,14 +1,14 @@
 import { betterAuth } from "better-auth";
 import { describe, expect, it } from "vitest";
-import { betterAuthLocalization } from "../index";
+import { localization } from "../index";
 
-describe("betterAuthLocalization", () => {
+describe("localization", () => {
 	describe("using built-in locale", () => {
 		it("initializes without errors", () => {
 			expect(() => {
 				betterAuth({
 					plugins: [
-						betterAuthLocalization({
+						localization({
 							defaultLocale: "pt-BR",
 						}),
 					],
@@ -22,7 +22,7 @@ describe("betterAuthLocalization", () => {
 			expect(() => {
 				betterAuth({
 					plugins: [
-						betterAuthLocalization({
+						localization({
 							defaultLocale: "fr",
 							translations: {
 								fr: {

@@ -21,7 +21,7 @@ import { getTranslation } from "./utils/translations";
  *
  * @example
  * ```typescript
- * betterAuthLocalization({
+ * localization({
  *   defaultLocale: "pt-BR",
  *   fallbackLocale: "default"
  * })
@@ -45,7 +45,7 @@ import { getTranslation } from "./utils/translations";
  *
  * @example Dynamic locale detection
  * ```typescript
- * betterAuthLocalization({
+ * localization({
  *   defaultLocale: "pt-BR",
  *   fallbackLocale: "default",
  *   getLocale: async (request) => {
@@ -55,7 +55,7 @@ import { getTranslation } from "./utils/translations";
  * })
  * ```
  */
-export const betterAuthLocalization = <
+export const localization = <
 	TCustomTranslations extends Record<string, PartialErrorCodesType> = {},
 >(
 	options: LocalizationOptions<TCustomTranslations>,
