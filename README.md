@@ -1,6 +1,7 @@
 # Better Auth Localization Plugin
 
 A localization plugin for [Better Auth](https://github.com/better-auth/better-auth) that automatically translates error messages.
+![ezgif-6723e2cdfd4aa9](https://github.com/user-attachments/assets/af185757-1772-4022-9820-eb437d23c86f)
 
 ## Features
 
