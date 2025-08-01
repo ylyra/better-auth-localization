@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.0.1
+
+### Patch Changes
+
+- Small JSDocs update
+
 ## 2.0.0
 
 ### Major Changes

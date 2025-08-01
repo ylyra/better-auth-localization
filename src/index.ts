@@ -14,7 +14,7 @@ import { getTranslation } from "./utils/translations";
  * Better Auth localization plugin
  *
  * @param options - The options for the plugin
- * @param options.defaultLocale - Default locale to use (available options: "default" | "pt-BR").
+ * @param options.defaultLocale - Default locale to use.
  * @param options.fallbackLocale - Fallback locale to use when the locale is not found in the translations. Default: "default"
  * @param options.translations - Add custom locales or override the current translations
  * @param options.getLocale - Function to get the locale from a request
