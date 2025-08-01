@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.0.3
+
+### Patch Changes
+
+- Wrong repo URL 🤦
+
 ## 2.0.2
 
 ### Patch Changes
