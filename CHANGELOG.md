@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.0.2
+
+### Patch Changes
+
+- Support for Polish (Thanks @stripsior)
+
 ## 2.0.1
 
 ### Patch Changes

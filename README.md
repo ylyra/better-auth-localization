@@ -19,7 +19,7 @@ Currently supported languages:
 - 🇵🇹 **Portuguese (pt-PT)** - ✅ Complete
 - 🇪🇸 **Spanish (es-ES)** - ✅ Complete
 - 🇫🇷 **French (fr-FR)** - ✅ Complete
-- 🇵🇱 **Polish (pl-PL)** - ✅ Complete
+- 🇵🇱 **Polish (pl-PL)** - ✅ Complete (Thanks @stripsior!)
 
 ## Installation
 
