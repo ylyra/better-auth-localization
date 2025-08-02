@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.0.4
+
+### Patch Changes
+
+- Support for Indonesian (Thanks @finly)
+
 ## 2.0.3
 
 ### Patch Changes
