@@ -3,6 +3,7 @@ import { FR_FR } from "./fr";
 import { PT_BR, PT_PT } from "./pt";
 import { PL_PL } from "./pl"
 import { ID_ID } from "./id"
+import { JA_JP } from "./ja"
 
 export const defaultTranslations = {
 	"pt-BR": PT_BR,
@@ -11,4 +12,5 @@ export const defaultTranslations = {
 	"fr-FR": FR_FR,
 	"pl-PL": PL_PL,
 	"id-ID": ID_ID,
+	"ja-JP": JA_JP,
 };
