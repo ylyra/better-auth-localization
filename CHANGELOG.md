@@ -1,5 +1,12 @@
 # better-auth-localization
 
+## 2.0.5
+
+### Patch Changes
+
+- - Support for Japanese (Thanks @HRTK92)
+  - Support for Arabic (Thanks @mosaleh-dev)
+
 ## 2.0.4
 
 ### Patch Changes

@@ -21,6 +21,8 @@ Currently supported languages:
 - 🇫🇷 **French (fr-FR)** - ✅ Complete
 - 🇵🇱 **Polish (pl-PL)** - ✅ Complete (Thanks @stripsior)
 - 🇮🇩 **Indonesian (id-ID)** - ✅ Complete (Thanks @finly)
+- 🇯🇵 **Japanese (ja-JP)** - ✅ Complete (Thanks @HRTK92)
+- 🇸🇦 **Arabic (ar-SA)** - ✅ Complete (Thanks @mosaleh-dev)
 
 ## Installation
 
