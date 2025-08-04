@@ -1,6 +1,6 @@
 {
 	"name": "better-auth-localization",
-	"version": "2.0.0",
+	"version": "2.0.4",
 	"author": "Marcel Losso",
 	"description": " A custom plugin for better-auth that allows you to localize your error messages.",
 	"main": "dist/index.js",
@@ -41,13 +41,13 @@
 		"locale"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/marcel-losso/better-auth-localization",
+	"homepage": "https://github.com/marcellosso/better-auth-localization",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/marcel-losso/better-auth-localization.git"
+		"url": "https://github.com/marcellosso/better-auth-localization.git"
 	},
 	"bugs": {
-		"url": "https://github.com/marcel-losso/better-auth-localization/issues"
+		"url": "https://github.com/marcellosso/better-auth-localization/issues"
 	},
 	"packageManager": "pnpm@10.13.1",
 	"devDependencies": {

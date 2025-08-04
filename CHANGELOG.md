@@ -1,5 +1,29 @@
 # better-auth-localization
 
+## 2.0.4
+
+### Patch Changes
+
+- Support for Indonesian (Thanks @finly)
+
+## 2.0.3
+
+### Patch Changes
+
+- Wrong repo URL 🤦
+
+## 2.0.2
+
+### Patch Changes
+
+- Support for Polish (Thanks @stripsior)
+
+## 2.0.1
+
+### Patch Changes
+
+- Small JSDocs update
+
 ## 2.0.0
 
 ### Major Changes
