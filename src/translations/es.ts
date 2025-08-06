@@ -7,12 +7,14 @@ export const ES_ES = {
 	FAILED_TO_UPDATE_USER: "Error al actualizar usuario",
 	USER_ALREADY_EXISTS: "Usuario ya existe",
 	USER_EMAIL_NOT_FOUND: "Email del usuario no encontrado",
-	USER_ALREADY_HAS_PASSWORD: "El usuario ya tiene una contraseña. Proporcione esa contraseña para eliminar la cuenta.",
+	USER_ALREADY_HAS_PASSWORD:
+		"El usuario ya tiene una contraseña. Proporcione esa contraseña para eliminar la cuenta.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Error al crear sesión",
 	FAILED_TO_GET_SESSION: "Error al obtener sesión",
-	SESSION_EXPIRED: "Sesión expirada. Inicie sesión nuevamente para realizar esta acción.",
+	SESSION_EXPIRED:
+		"Sesión expirada. Inicie sesión nuevamente para realizar esta acción.",
 
 	// Authentication errors
 	INVALID_PASSWORD: "Contraseña inválida",
@@ -35,5 +37,5 @@ export const ES_ES = {
 	// Account management errors
 	EMAIL_CAN_NOT_BE_UPDATED: "Email no puede ser actualizado",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "No puede desvincular su última cuenta",
-	ACCOUNT_NOT_FOUND: "Cuenta no encontrada",	
+	ACCOUNT_NOT_FOUND: "Cuenta no encontrada",
 } satisfies ErrorCodesType;

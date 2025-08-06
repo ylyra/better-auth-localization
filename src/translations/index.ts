@@ -8,13 +8,13 @@ import { JA_JP } from "./ja";
 import { EL_GR } from "./el";
 
 export const defaultTranslations = {
-  "pt-BR": PT_BR,
-  "pt-PT": PT_PT,
-  "es-ES": ES_ES,
-  "fr-FR": FR_FR,
-  "pl-PL": PL_PL,
-  "id-ID": ID_ID,
-  "ar-SA": AR_SA,
-  "ja-JP": JA_JP,
-  "el-GR": EL_GR
+	"pt-BR": PT_BR,
+	"pt-PT": PT_PT,
+	"es-ES": ES_ES,
+	"fr-FR": FR_FR,
+	"pl-PL": PL_PL,
+	"id-ID": ID_ID,
+	"ar-SA": AR_SA,
+	"ja-JP": JA_JP,
+	"el-GR": EL_GR,
 };

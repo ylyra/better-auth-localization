@@ -23,6 +23,7 @@ Currently supported languages:
 - 🇮🇩 **Indonesian (id-ID)** - ✅ Complete (Thanks @finly)
 - 🇯🇵 **Japanese (ja-JP)** - ✅ Complete (Thanks @HRTK92)
 - 🇸🇦 **Arabic (ar-SA)** - ✅ Complete (Thanks @mosaleh-dev)
+- 🇬🇷 **Greek (el-GR)** - ✅ Complete (Thanks @DomVournias)
 
 ## Installation
 

@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.0.6
+
+### Patch Changes
+
+- Support for Greek (Thanks @DomVournias)
+
 ## 2.0.5
 
 ### Patch Changes

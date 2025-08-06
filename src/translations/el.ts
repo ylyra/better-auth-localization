@@ -27,13 +27,15 @@ export const EL_GR = {
 	PASSWORD_TOO_LONG: "Ο κωδικός είναι πολύ μεγάλος",
 
 	// Social auth errors
-	SOCIAL_ACCOUNT_ALREADY_LINKED: "Ο λογαριασμός κοινωνικού μέσου έχει συνδεθεί ήδη",
+	SOCIAL_ACCOUNT_ALREADY_LINKED:
+		"Ο λογαριασμός κοινωνικού μέσου έχει συνδεθεί ήδη",
 	PROVIDER_NOT_FOUND: "Δεν βρέθηκε ο πάροχος",
 	ID_TOKEN_NOT_SUPPORTED: "Το id_token δεν υποστηρίζεται",
 	FAILED_TO_GET_USER_INFO: "Αποτυχία ανάκτησης πληροφοριών του χρήστη",
 
 	// Account management errors
 	EMAIL_CAN_NOT_BE_UPDATED: "Το email δεν μπορεί να ενημερωθεί",
-	FAILED_TO_UNLINK_LAST_ACCOUNT: "Αποτυχία αποσύνδεσης του τελευταίου λογαριασμού",
-	ACCOUNT_NOT_FOUND: "Ο λογαριασμός δεν βρέθηκε",	
+	FAILED_TO_UNLINK_LAST_ACCOUNT:
+		"Αποτυχία αποσύνδεσης του τελευταίου λογαριασμού",
+	ACCOUNT_NOT_FOUND: "Ο λογαριασμός δεν βρέθηκε",
 } satisfies ErrorCodesType;

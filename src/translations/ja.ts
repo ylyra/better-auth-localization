@@ -7,12 +7,14 @@ export const JA_JP = {
 	FAILED_TO_UPDATE_USER: "ユーザーの更新に失敗しました",
 	USER_ALREADY_EXISTS: "ユーザーは既に存在します",
 	USER_EMAIL_NOT_FOUND: "ユーザーのメールアドレスが見つかりません",
-	USER_ALREADY_HAS_PASSWORD: "ユーザーは既にパスワードを設定しています。アカウントを削除するには、そのパスワードを入力してください。",
+	USER_ALREADY_HAS_PASSWORD:
+		"ユーザーは既にパスワードを設定しています。アカウントを削除するには、そのパスワードを入力してください。",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "セッションの作成に失敗しました",
 	FAILED_TO_GET_SESSION: "セッションの取得に失敗しました",
-	SESSION_EXPIRED: "セッションが期限切れです。この操作を実行するには再度ログインしてください。",
+	SESSION_EXPIRED:
+		"セッションが期限切れです。この操作を実行するには再度ログインしてください。",
 
 	// Authentication errors
 	INVALID_PASSWORD: "パスワードが無効です",

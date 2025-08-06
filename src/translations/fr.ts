@@ -32,10 +32,12 @@ export const FR_FR = {
 	SOCIAL_ACCOUNT_ALREADY_LINKED: "Compte déjà lié",
 	PROVIDER_NOT_FOUND: "Fournisseur non trouvé",
 	ID_TOKEN_NOT_SUPPORTED: "id_token non pris en charge",
-	FAILED_TO_GET_USER_INFO: "Échec de la récupération des informations de l'utilisateur",
+	FAILED_TO_GET_USER_INFO:
+		"Échec de la récupération des informations de l'utilisateur",
 
 	// Account management errors
 	EMAIL_CAN_NOT_BE_UPDATED: "L'e-mail ne peut pas être mis à jour",
-	FAILED_TO_UNLINK_LAST_ACCOUNT: "Vous ne pouvez pas dissocier votre dernier compte",
+	FAILED_TO_UNLINK_LAST_ACCOUNT:
+		"Vous ne pouvez pas dissocier votre dernier compte",
 	ACCOUNT_NOT_FOUND: "Compte non trouvé",
 } satisfies ErrorCodesType;

@@ -7,8 +7,7 @@ export const PL_PL = {
 	FAILED_TO_UPDATE_USER: "Wystąpił problem podczas aktulizacji użytkownika",
 	USER_ALREADY_EXISTS: "Użytkownik już istnieje",
 	USER_EMAIL_NOT_FOUND: "Nie znaleziono adresu email",
-	USER_ALREADY_HAS_PASSWORD:
-		"Użytkownik już posiada ustawione hasło",
+	USER_ALREADY_HAS_PASSWORD: "Użytkownik już posiada ustawione hasło",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Wystąpił problem podczas tworzenia sesji",
@@ -32,7 +31,8 @@ export const PL_PL = {
 	SOCIAL_ACCOUNT_ALREADY_LINKED: "To konto już jest połączone",
 	PROVIDER_NOT_FOUND: "Nie znaleziono dostawcy",
 	ID_TOKEN_NOT_SUPPORTED: "id_token nie jest obsługiwany",
-	FAILED_TO_GET_USER_INFO: "Wystąpił błąd podczas pobierania informacji o użytkowniku",
+	FAILED_TO_GET_USER_INFO:
+		"Wystąpił błąd podczas pobierania informacji o użytkowniku",
 
 	// Account management errors
 	EMAIL_CAN_NOT_BE_UPDATED: "Nie można zaktulizować adresu email",

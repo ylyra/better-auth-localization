@@ -7,12 +7,14 @@ export const ID_ID = {
 	FAILED_TO_UPDATE_USER: "Gagal memperbarui pengguna",
 	USER_ALREADY_EXISTS: "Pengguna sudah ada",
 	USER_EMAIL_NOT_FOUND: "Email pengguna tidak ditemukan",
-	USER_ALREADY_HAS_PASSWORD: "Pengguna sudah memiliki kata sandi. Gunakan kata sandi sebelumnya untuk menghapus akun.",
+	USER_ALREADY_HAS_PASSWORD:
+		"Pengguna sudah memiliki kata sandi. Gunakan kata sandi sebelumnya untuk menghapus akun.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Gagal membuat sesi",
 	FAILED_TO_GET_SESSION: "Gagal mendapatkan sesi",
-	SESSION_EXPIRED: "Sesi telah kedaluwarsa. Silakan autentikasi ulang untuk melanjutkan.",
+	SESSION_EXPIRED:
+		"Sesi telah kedaluwarsa. Silakan autentikasi ulang untuk melanjutkan.",
 
 	// Authentication errors
 	INVALID_PASSWORD: "Kata sandi tidak valid",
@@ -34,6 +36,7 @@ export const ID_ID = {
 
 	// Account management errors
 	EMAIL_CAN_NOT_BE_UPDATED: "Alamat email tidak dapat diperbarui",
-	FAILED_TO_UNLINK_LAST_ACCOUNT: "Anda tidak dapat menghapus tautan akun terakhir Anda",
+	FAILED_TO_UNLINK_LAST_ACCOUNT:
+		"Anda tidak dapat menghapus tautan akun terakhir Anda",
 	ACCOUNT_NOT_FOUND: "Akun tidak ditemukan",
 } satisfies ErrorCodesType;
