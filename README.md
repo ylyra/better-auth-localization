@@ -24,10 +24,11 @@ Currently supported languages:
 - 🇯🇵 **Japanese (ja-JP)** - ✅ Complete (Thanks @HRTK92)
 - 🇸🇦 **Arabic (ar-SA)** - ✅ Complete (Thanks @mosaleh-dev)
 - 🇬🇷 **Greek (el-GR)** - ✅ Complete (Thanks @DomVournias)
+- 🇸🇪 **Swedish (sv-SE)** - ✅ Complete (Thanks @yamanadamnor)
 - 🇮🇹 **Italian (it-IT)** - ✅ Complete (Thanks @mattiamalonni)
 - 🇩🇪 **German (de-DE)** - ✅ Complete (Thanks @NiklasDah)
-  - 🇩🇪 **German (informal, "du") (de-DE-informal) (default)** - ✅ Complete (Thanks @NiklasDah)
-  - 🇩🇪 **German (formal, "Sie") (de-DE-formal)** - ✅ Complete (Thanks @NiklasDah)
+  - 🇩🇪 **German (informal, "du") (de-DE-informal) (default)** 
+  - 🇩🇪 **German (formal, "Sie") (de-DE-formal)** 
 
 ## Installation
 
@@ -137,7 +138,7 @@ The plugin comes with built-in translations for all Better Auth error codes:
 - Social authentication errors
 - Account management errors
 
-For a complete and specific list, refer to the Better Auth documentation.
+For a complete and specific list, refer to the [Better Auth documentation](https://github.com/better-auth/better-auth/blob/canary/packages/better-auth/src/error/codes.ts).
 
 ## Contributing
 

@@ -7,6 +7,7 @@ import { IT_IT } from "./it";
 import { AR_SA } from "./ar";
 import { JA_JP } from "./ja";
 import { EL_GR } from "./el";
+import { SV_SE } from "./sv";
 import { DE_DE_INFORMAL, DE_DE_FORMAL } from "./de";
 
 export const defaultTranslations = {
@@ -20,6 +21,7 @@ export const defaultTranslations = {
 	"ar-SA": AR_SA,
 	"ja-JP": JA_JP,
 	"el-GR": EL_GR,
+	"sv-SE": SV_SE
   "de-DE": DE_DE_INFORMAL,
   "de-DE-formal": DE_DE_FORMAL,
   "de-DE-informal": DE_DE_INFORMAL,
