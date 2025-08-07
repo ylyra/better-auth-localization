@@ -1,5 +1,14 @@
 # better-auth-localization
 
+## 2.0.7
+
+### Patch Changes
+
+- Added support for new languages:
+  - 🇸🇪 **Swedish (sv-SE)** (Thanks @yamanadamnor)
+  - 🇮🇹 **Italian (it-IT)** (Thanks @mattiamalonni)
+  - 🇩🇪 **German (de-DE)** (Thanks @NiklasDah)
+
 ## 2.0.6
 
 ### Patch Changes

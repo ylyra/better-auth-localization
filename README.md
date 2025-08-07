@@ -12,24 +12,6 @@ A localization plugin for [Better Auth](https://github.com/better-auth/better-au
 - 🔧 **Flexible locale detection** - Support for custom locale resolution from headers, cookies, or databases
 - ⚡ **Zero runtime overhead** - Translations are bundled at build time
 
-### Language Support Status
-
-Currently supported languages:
-- 🇧🇷 **Portuguese (pt-BR)** - ✅ Complete
-- 🇵🇹 **Portuguese (pt-PT)** - ✅ Complete
-- 🇪🇸 **Spanish (es-ES)** - ✅ Complete
-- 🇫🇷 **French (fr-FR)** - ✅ Complete
-- 🇵🇱 **Polish (pl-PL)** - ✅ Complete (Thanks @stripsior)
-- 🇮🇩 **Indonesian (id-ID)** - ✅ Complete (Thanks @finly)
-- 🇯🇵 **Japanese (ja-JP)** - ✅ Complete (Thanks @HRTK92)
-- 🇸🇦 **Arabic (ar-SA)** - ✅ Complete (Thanks @mosaleh-dev)
-- 🇬🇷 **Greek (el-GR)** - ✅ Complete (Thanks @DomVournias)
-- 🇸🇪 **Swedish (sv-SE)** - ✅ Complete (Thanks @yamanadamnor)
-- 🇮🇹 **Italian (it-IT)** - ✅ Complete (Thanks @mattiamalonni)
-- 🇩🇪 **German (de-DE)** - ✅ Complete (Thanks @NiklasDah)
-  - 🇩🇪 **German (informal, "du") (de-DE-informal) (default)** 
-  - 🇩🇪 **German (formal, "Sie") (de-DE-formal)** 
-
 ## Installation
 
 ```bash
@@ -126,6 +108,23 @@ localization({
 });
 ```
 
+### Language Support Status
+
+Currently supported languages:
+- 🇧🇷 **Portuguese (pt-BR)** - ✅ Complete
+- 🇵🇹 **Portuguese (pt-PT)** - ✅ Complete
+- 🇪🇸 **Spanish (es-ES)** - ✅ Complete
+- 🇫🇷 **French (fr-FR)** - ✅ Complete
+- 🇵🇱 **Polish (pl-PL)** - ✅ Complete (Thanks @stripsior)
+- 🇮🇩 **Indonesian (id-ID)** - ✅ Complete (Thanks @finly)
+- 🇯🇵 **Japanese (ja-JP)** - ✅ Complete (Thanks @HRTK92)
+- 🇸🇦 **Arabic (ar-SA)** - ✅ Complete (Thanks @mosaleh-dev)
+- 🇬🇷 **Greek (el-GR)** - ✅ Complete (Thanks @DomVournias)
+- 🇸🇪 **Swedish (sv-SE)** - ✅ Complete (Thanks @yamanadamnor)
+- 🇮🇹 **Italian (it-IT)** - ✅ Complete (Thanks @mattiamalonni)
+- 🇩🇪 **German (de-DE)** - ✅ Complete (Thanks @NiklasDah)
+  - 🇩🇪 **German (informal, "du") (de-DE-informal) (default)** 
+  - 🇩🇪 **German (formal, "Sie") (de-DE-formal)** 
 
 ## Built-in Translations
 

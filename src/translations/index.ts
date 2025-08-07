@@ -21,8 +21,8 @@ export const defaultTranslations = {
 	"ar-SA": AR_SA,
 	"ja-JP": JA_JP,
 	"el-GR": EL_GR,
-	"sv-SE": SV_SE
-  "de-DE": DE_DE_INFORMAL,
-  "de-DE-formal": DE_DE_FORMAL,
-  "de-DE-informal": DE_DE_INFORMAL,
+	"sv-SE": SV_SE,
+	"de-DE": DE_DE_INFORMAL,
+	"de-DE-formal": DE_DE_FORMAL,
+	"de-DE-informal": DE_DE_INFORMAL,
 };
