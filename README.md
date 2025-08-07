@@ -24,6 +24,9 @@ Currently supported languages:
 - 🇯🇵 **Japanese (ja-JP)** - ✅ Complete (Thanks @HRTK92)
 - 🇸🇦 **Arabic (ar-SA)** - ✅ Complete (Thanks @mosaleh-dev)
 - 🇬🇷 **Greek (el-GR)** - ✅ Complete (Thanks @DomVournias)
+- 🇩🇪 **German (de-DE)** - ✅ Complete (Thanks @NiklasDah)
+  - 🇩🇪 **German (informal, "du") (de-DE-informal) (default)** - ✅ Complete (Thanks @NiklasDah)
+  - 🇩🇪 **German (formal, "Sie") (de-DE-formal)** - ✅ Complete (Thanks @NiklasDah)
 
 ## Installation
 
