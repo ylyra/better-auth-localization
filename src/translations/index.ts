@@ -6,6 +6,7 @@ import { ID_ID } from "./id";
 import { AR_SA } from "./ar";
 import { JA_JP } from "./ja";
 import { EL_GR } from "./el";
+import { SV_SE } from "./sv";
 
 export const defaultTranslations = {
 	"pt-BR": PT_BR,
@@ -17,4 +18,5 @@ export const defaultTranslations = {
 	"ar-SA": AR_SA,
 	"ja-JP": JA_JP,
 	"el-GR": EL_GR,
+	"sv-SE": SV_SE
 };

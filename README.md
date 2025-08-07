@@ -24,6 +24,7 @@ Currently supported languages:
 - 🇯🇵 **Japanese (ja-JP)** - ✅ Complete (Thanks @HRTK92)
 - 🇸🇦 **Arabic (ar-SA)** - ✅ Complete (Thanks @mosaleh-dev)
 - 🇬🇷 **Greek (el-GR)** - ✅ Complete (Thanks @DomVournias)
+- 🇸🇪 **Swedish (sv-SE)** - ✅ Complete (Thanks @yamanadamnor)
 
 ## Installation
 
