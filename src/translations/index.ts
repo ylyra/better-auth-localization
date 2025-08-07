@@ -3,6 +3,7 @@ import { FR_FR } from "./fr";
 import { PT_BR, PT_PT } from "./pt";
 import { PL_PL } from "./pl";
 import { ID_ID } from "./id";
+import { IT_IT } from "./it";
 import { AR_SA } from "./ar";
 import { JA_JP } from "./ja";
 import { EL_GR } from "./el";
@@ -14,6 +15,7 @@ export const defaultTranslations = {
 	"fr-FR": FR_FR,
 	"pl-PL": PL_PL,
 	"id-ID": ID_ID,
+	"it-IT": IT_IT,
 	"ar-SA": AR_SA,
 	"ja-JP": JA_JP,
 	"el-GR": EL_GR,
