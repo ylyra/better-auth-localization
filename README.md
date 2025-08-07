@@ -25,6 +25,10 @@ Currently supported languages:
 - 🇸🇦 **Arabic (ar-SA)** - ✅ Complete (Thanks @mosaleh-dev)
 - 🇬🇷 **Greek (el-GR)** - ✅ Complete (Thanks @DomVournias)
 - 🇸🇪 **Swedish (sv-SE)** - ✅ Complete (Thanks @yamanadamnor)
+- 🇮🇹 **Italian (it-IT)** - ✅ Complete (Thanks @mattiamalonni)
+- 🇩🇪 **German (de-DE)** - ✅ Complete (Thanks @NiklasDah)
+  - 🇩🇪 **German (informal, "du") (de-DE-informal) (default)** 
+  - 🇩🇪 **German (formal, "Sie") (de-DE-formal)** 
 
 ## Installation
 
