@@ -9,7 +9,7 @@ import { JA_JP } from "./ja";
 import { EL_GR } from "./el";
 import { SV_SE } from "./sv";
 import { DE_DE_INFORMAL, DE_DE_FORMAL } from "./de";
-import { KO, KO_KO } from "./ko";
+import { KO_KO } from "./ko";
 
 export const defaultTranslations = {
 	"pt-BR": PT_BR,
