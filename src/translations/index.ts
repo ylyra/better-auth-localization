@@ -10,6 +10,8 @@ import { EL_GR } from "./el";
 import { SV_SE } from "./sv";
 import { DE_DE_INFORMAL, DE_DE_FORMAL } from "./de";
 import { ZH_HANS } from "./zh-hans";
+import { KO_KO } from "./ko";
+import { HI_HI } from "./hi";
 
 export const defaultTranslations = {
 	"pt-BR": PT_BR,
@@ -26,5 +28,7 @@ export const defaultTranslations = {
 	"de-DE": DE_DE_INFORMAL,
 	"de-DE-formal": DE_DE_FORMAL,
 	"de-DE-informal": DE_DE_INFORMAL,
-	"zh-Hans": ZH_HANS
+	"zh-Hans": ZH_HANS,
+	"ko-KR": KO_KO,
+	"hi-HI": HI_HI
 };
