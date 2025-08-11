@@ -1,6 +1,6 @@
 // Auto-generates src/translations/index.ts by merging LOCALES from each translation file
-// This file is not committed to git. Build and tests run this generator automatically.
-// Run manually via: node scripts/generate-translations-index.cjs
+// The generated file is not committed to git. Build and tests run this generator automatically.
+// Run manually via: pnpm generate:translations
 
 const fs = require('fs');
 const path = require('path');
