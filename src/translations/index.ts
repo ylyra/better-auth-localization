@@ -9,8 +9,7 @@ import { JA_JP } from "./ja";
 import { EL_GR } from "./el";
 import { SV_SE } from "./sv";
 import { DE_DE_INFORMAL, DE_DE_FORMAL } from "./de";
-import { ZH_HANT } from "./zh_hant";
-import { ZH_HANS } from "./zh-hans";
+import { ZH_HANT, ZH_HANS } from "./zh";
 import { KO_KO } from "./ko";
 import { HI_HI } from "./hi";
 
@@ -32,5 +31,5 @@ export const defaultTranslations = {
 	"zh-Hant": ZH_HANT,
 	"zh-Hans": ZH_HANS,
 	"ko-KR": KO_KO,
-	"hi-HI": HI_HI
+	"hi-HI": HI_HI,
 };

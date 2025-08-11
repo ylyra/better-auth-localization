@@ -7,12 +7,14 @@ export const HI_HI = {
 	FAILED_TO_UPDATE_USER: "उपयोगकर्ता अपडेट करने में विफल",
 	USER_ALREADY_EXISTS: "उपयोगकर्ता पहले से मौजूद है",
 	USER_EMAIL_NOT_FOUND: "उपयोगकर्ता का ईमेल नहीं मिला",
-	USER_ALREADY_HAS_PASSWORD: "उपयोगकर्ता ने पहले से पासवर्ड सेट किया है। खाता हटाने के लिए कृपया वह पासवर्ड प्रदान करें।",
+	USER_ALREADY_HAS_PASSWORD:
+		"उपयोगकर्ता ने पहले से पासवर्ड सेट किया है। खाता हटाने के लिए कृपया वह पासवर्ड प्रदान करें।",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "सत्र बनाने में विफल",
 	FAILED_TO_GET_SESSION: "सत्र प्राप्त करने में विफल",
-	SESSION_EXPIRED: "सत्र समाप्त हो गया है। इस कार्रवाई को करने के लिए कृपया फिर से लॉगिन करें।",
+	SESSION_EXPIRED:
+		"सत्र समाप्त हो गया है। इस कार्रवाई को करने के लिए कृपया फिर से लॉगिन करें।",
 
 	// Authentication errors
 	INVALID_PASSWORD: "अमान्य पासवर्ड",

@@ -1,5 +1,15 @@
 # better-auth-localization
 
+## 2.0.8
+
+### Patch Changes
+
+- Added support for new languages:
+  - 🇨🇳 **Traditional Chinese (zh-Hant)** (Thanks @MarkLee425)
+  - 🇨🇳 **Simplified Chinese (zh-Hans)** (Thanks @MarkLee425)
+  - 🇰🇷 **Korean (ko-KR)** (Thanks @MarkLee425)
+  - 🇮🇳 **Hindi (hi-HI)** (Thanks @MarkLee425)
+
 ## 2.0.7
 
 ### Patch Changes

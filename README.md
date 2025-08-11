@@ -125,6 +125,10 @@ Currently supported languages:
 - 🇩🇪 **German (de-DE)** - ✅ Complete (Thanks @NiklasDah)
   - 🇩🇪 **German (informal, "du") (de-DE-informal) (default)** 
   - 🇩🇪 **German (formal, "Sie") (de-DE-formal)** 
+- 🇨🇳 **Traditional Chinese (zh-Hant)** - ✅ Complete (Thanks @MarkLee425)
+- 🇨🇳 **Simplified Chinese (zh-Hans)** - ✅ Complete (Thanks @MarkLee425)
+- 🇰🇷 **Korean (ko-KR)** - ✅ Complete (Thanks @MarkLee425)
+- 🇮🇳 **Hindi (hi-HI)** - ✅ Complete (Thanks @MarkLee425)
 
 ## Built-in Translations
 

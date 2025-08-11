@@ -7,12 +7,14 @@ export const KO_KO = {
 	FAILED_TO_UPDATE_USER: "사용자 업데이트 실패",
 	USER_ALREADY_EXISTS: "이미 존재하는 사용자입니다",
 	USER_EMAIL_NOT_FOUND: "사용자의 이메일을 찾을 수 없습니다",
-	USER_ALREADY_HAS_PASSWORD: "사용자가 이미 비밀번호를 설정했습니다. 계정을 삭제하려면 해당 비밀번호를 제공하십시오.",
+	USER_ALREADY_HAS_PASSWORD:
+		"사용자가 이미 비밀번호를 설정했습니다. 계정을 삭제하려면 해당 비밀번호를 제공하십시오.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "세션 생성 실패",
 	FAILED_TO_GET_SESSION: "세션 가져오기 실패",
-	SESSION_EXPIRED: "세션이 만료되었습니다. 이 작업을 수행하려면 다시 로그인하십시오.",
+	SESSION_EXPIRED:
+		"세션이 만료되었습니다. 이 작업을 수행하려면 다시 로그인하십시오.",
 
 	// Authentication errors
 	INVALID_PASSWORD: "잘못된 비밀번호",
