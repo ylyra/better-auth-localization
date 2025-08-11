@@ -9,6 +9,7 @@ import { JA_JP } from "./ja";
 import { EL_GR } from "./el";
 import { SV_SE } from "./sv";
 import { DE_DE_INFORMAL, DE_DE_FORMAL } from "./de";
+import { KO_KO } from "./ko";
 import { HI_HI } from "./hi";
 
 export const defaultTranslations = {
@@ -26,5 +27,6 @@ export const defaultTranslations = {
 	"de-DE": DE_DE_INFORMAL,
 	"de-DE-formal": DE_DE_FORMAL,
 	"de-DE-informal": DE_DE_INFORMAL,
+	"ko-KR": KO_KO,
 	"hi_HI": HI_HI
 };
