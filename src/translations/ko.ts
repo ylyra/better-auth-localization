@@ -41,5 +41,5 @@ export const KO_KO = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "ko-KR": KO_KO,
+	"ko-KR": KO_KO,
 } as const;

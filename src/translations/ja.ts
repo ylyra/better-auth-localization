@@ -41,5 +41,5 @@ export const JA_JP = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "ja-JP": JA_JP,
+	"ja-JP": JA_JP,
 } as const;

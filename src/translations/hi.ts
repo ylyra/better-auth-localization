@@ -41,5 +41,5 @@ export const HI_HI = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "hi-HI": HI_HI,
+	"hi-HI": HI_HI,
 } as const;

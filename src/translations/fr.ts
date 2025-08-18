@@ -43,5 +43,5 @@ export const FR_FR = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "fr-FR": FR_FR,
+	"fr-FR": FR_FR,
 } as const;

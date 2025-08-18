@@ -41,5 +41,5 @@ export const AR_SA = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "ar-SA": AR_SA,
+	"ar-SA": AR_SA,
 } as const;

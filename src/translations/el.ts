@@ -41,5 +41,5 @@ export const EL_GR = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "el-GR": EL_GR,
+	"el-GR": EL_GR,
 } as const;

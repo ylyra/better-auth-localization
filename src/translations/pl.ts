@@ -41,5 +41,5 @@ export const PL_PL = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "pl-PL": PL_PL,
+	"pl-PL": PL_PL,
 } as const;

@@ -39,5 +39,5 @@ export const SV_SE = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "sv-SE": SV_SE,
+	"sv-SE": SV_SE,
 } as const;

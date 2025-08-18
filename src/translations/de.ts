@@ -51,7 +51,7 @@ export const DE_DE_FORMAL = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "de-DE": DE_DE_INFORMAL,
-    "de-DE-formal": DE_DE_FORMAL,
-    "de-DE-informal": DE_DE_INFORMAL,
+	"de-DE": DE_DE_INFORMAL,
+	"de-DE-formal": DE_DE_FORMAL,
+	"de-DE-informal": DE_DE_INFORMAL,
 } as const;

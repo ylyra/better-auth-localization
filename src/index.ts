@@ -87,11 +87,11 @@ export const localization = <
 					}
 
 					console.warn(
-						`[better-auth-localization] Locale "${locale}" not found in translations. ` +
+						`[better-auth-localization] Locale "${String(locale)}" not found in translations. ` +
 							`Available locales: ${Object.keys(mergedTranslations).join(
 								", ",
 							)}. ` +
-							`Falling back to "${defaultLocale}"`,
+							`Falling back to "${String(defaultLocale)}"`,
 					);
 					return currLocale;
 				} catch (error) {

@@ -81,6 +81,6 @@ export const PT_PT = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "pt-BR": PT_BR,
-    "pt-PT": PT_PT,
+	"pt-BR": PT_BR,
+	"pt-PT": PT_PT,
 } as const;

@@ -41,5 +41,5 @@ export const IT_IT = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "it-IT": IT_IT,
+	"it-IT": IT_IT,
 } as const;

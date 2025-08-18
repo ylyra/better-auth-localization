@@ -42,5 +42,5 @@ export const ID_ID = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "id-ID": ID_ID,
+	"id-ID": ID_ID,
 } as const;

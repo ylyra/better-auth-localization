@@ -77,6 +77,6 @@ export const ZH_HANS = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-    "zh-Hant": ZH_HANT,
-    "zh-Hans": ZH_HANS,
+	"zh-Hant": ZH_HANT,
+	"zh-Hans": ZH_HANS,
 } as const;
