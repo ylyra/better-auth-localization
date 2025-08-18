@@ -12,6 +12,7 @@ import { DE_DE_INFORMAL, DE_DE_FORMAL } from "./de";
 import { ZH_HANT, ZH_HANS } from "./zh";
 import { KO_KO } from "./ko";
 import { HI_HI } from "./hi";
+import { NL_NL_INFORMAL, NL_NL_FORMAL } from "./nl";
 
 export const defaultTranslations = {
 	"pt-BR": PT_BR,
@@ -32,4 +33,7 @@ export const defaultTranslations = {
 	"zh-Hans": ZH_HANS,
 	"ko-KR": KO_KO,
 	"hi-HI": HI_HI,
+  "nl-NL": NL_NL_INFORMAL,
+  "nl-NL-formal": NL_NL_FORMAL,
+  "nl-NL-informal": NL_NL_INFORMAL,
 };
