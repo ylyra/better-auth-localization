@@ -1,5 +1,27 @@
 # better-auth-localization
 
+## 2.1.0
+
+### Minor Changes
+
+- Now translations index is automatically generated on build through the generate-translations-index.cjs script, this was done to avoid manually updating the translations index file which was generating merge conflicts.
+  This is a breaking change when adding new translations from now on, as we now need to export a LOCALES object from the translation file.
+
+  ```ts
+  export const LOCALES = {
+    "pt-BR": PT_BR,
+    "pt-PT": PT_PT,
+  } as const;
+  ```
+
+  To generate the translations index locally for testing purposes, run:
+
+  ```bash
+  pnpm generate:translations
+  ```
+
+ - Added support for Dutch nl-NL (thanks @InvixGG)
+
 ## 2.0.8
 
 ### Patch Changes
