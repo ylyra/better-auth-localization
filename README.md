@@ -129,6 +129,7 @@ Currently supported languages:
 - 🇨🇳 **Simplified Chinese (zh-Hans)** - ✅ Complete (Thanks @MarkLee425)
 - 🇰🇷 **Korean (ko-KR)** - ✅ Complete (Thanks @MarkLee425)
 - 🇮🇳 **Hindi (hi-HI)** - ✅ Complete (Thanks @MarkLee425)
+- 🇹🇷 **Turkish (tr-TR)** - ✅ Complete (Thanks @furkanczay)
 - 🇳🇱 **Dutch (nl-NL)** - ✅ Complete (Thanks @InvixGG)
   - 🇳🇱 **Dutch (informal, "je") (nl-NL-informal) (default)**
   - 🇳🇱 **Dutch (formal, "u") (nl-NL-formal)**

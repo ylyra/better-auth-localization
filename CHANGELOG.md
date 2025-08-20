@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.1.1
+
+### Patch Changes
+
+- Added support for Turkish (Thanks @furkanczay)
+
 ## 2.1.0
 
 ### Minor Changes
@@ -20,7 +26,7 @@
   pnpm generate:translations
   ```
 
- - Added support for Dutch nl-NL (thanks @InvixGG)
+- Added support for Dutch nl-NL (thanks @InvixGG)
 
 ## 2.0.8
 
