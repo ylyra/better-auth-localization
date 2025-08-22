@@ -150,3 +150,5 @@ export type {
 	LocalizationOptions,
 	PartialErrorCodesType,
 } from "./types";
+
+export { betterAuthLocalizationClientPlugin } from "./client";
