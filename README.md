@@ -133,6 +133,7 @@ Currently supported languages:
 - 🇳🇱 **Dutch (nl-NL)** - ✅ Complete (Thanks @InvixGG)
   - 🇳🇱 **Dutch (informal, "je") (nl-NL-informal) (default)**
   - 🇳🇱 **Dutch (formal, "u") (nl-NL-formal)**
+- 🇮🇷 **Persian/Farsi (fa-IR)** - ✅ Complete (Thanks @Yasser5711)
 
 ## Built-in Translations
 

@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.1.3
+
+### Patch Changes
+
+- Added support for Persian/Farsi (Thanks @Yasser5711)
+
 ## 2.1.2
 
 ### Patch Changes
