@@ -134,6 +134,7 @@ Currently supported languages:
   - 🇳🇱 **Dutch (informal, "je") (nl-NL-informal) (default)**
   - 🇳🇱 **Dutch (formal, "u") (nl-NL-formal)**
 - 🇮🇷 **Persian/Farsi (fa-IR)** - ✅ Complete (Thanks @Yasser5711)
+- 🇷🇺 **Russian (ru-RU)** - ✅ Complete (Thanks @draneone)
 
 ## Built-in Translations
 

@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.1.4
+
+### Patch Changes
+
+- Added support for Russian (Thanks @draneone)
+
 ## 2.1.3
 
 ### Patch Changes
