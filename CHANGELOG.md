@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.1.2
+
+### Patch Changes
+
+- Missing client plugin export
+
 ## 2.1.1
 
 ### Patch Changes
