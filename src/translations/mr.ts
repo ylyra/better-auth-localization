@@ -1,6 +1,6 @@
 import { ErrorCodesType } from "../types";
 
-export const HI_HI = {
+export const MR_MR = {
 	// User related errors
 	USER_NOT_FOUND: "वापरकर्ता सापडला नाही",
 	FAILED_TO_CREATE_USER: "वापरकर्ता तयार करण्यात अयशस्वी",
