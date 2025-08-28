@@ -135,6 +135,7 @@ Currently supported languages:
   - 🇳🇱 **Dutch (formal, "u") (nl-NL-formal)**
 - 🇮🇷 **Persian/Farsi (fa-IR)** - ✅ Complete (Thanks @Yasser5711)
 - 🇷🇺 **Russian (ru-RU)** - ✅ Complete (Thanks @draneone)
+- 🇮🇳 **Marathi (mr-MR)** - ✅ Complete (Thanks @OutOfBoundCats)
 
 ## Built-in Translations
 

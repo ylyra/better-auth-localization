@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.1.5
+
+### Patch Changes
+
+- Added support for Marathi (Thanks @OutOfBoundCats)
+
 ## 2.1.4
 
 ### Patch Changes
