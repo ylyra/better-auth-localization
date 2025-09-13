@@ -161,7 +161,7 @@ This repo auto-generates the translations index to avoid PR conflicts when multi
 1. Create a new file in `src/translations/`, for example `nl.ts`.
 2. Export your translation object and a `LOCALES` map from that file:
    ```ts
-   import { ErrorCodesType } from "../types";
+   import type { ErrorCodesType } from "../types";
 
    export const NL_NL = { /* ...all error codes... */ } satisfies ErrorCodesType;
 

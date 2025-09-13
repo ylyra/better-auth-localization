@@ -1,5 +1,12 @@
 # better-auth-localization
 
+## 2.1.7
+
+### Patch Changes
+
+- Fixed issue where translations were not applied on server side requests
+- Added support for Danish (Thanks @BjornFrancke)
+
 ## 2.1.6
 
 ### Patch Changes

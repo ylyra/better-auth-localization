@@ -1,4 +1,4 @@
-import { ErrorCodesType } from "../types";
+import type { ErrorCodesType } from "../types";
 
 export const SV_SE = {
 	// User related errors

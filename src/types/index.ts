@@ -66,7 +66,8 @@ export type LocalizationOptions<
 	/**
 	 * Function to determine locale from request
 	 * Can be async and should return a valid locale string
-	 *
+	 * For server side calls, request is undefined
+	 * 
 	 * @param request - The incoming request object
 	 * @returns Locale string or Promise resolving to locale string
 	 *
@@ -76,7 +77,7 @@ export type LocalizationOptions<
 	 * ```
 	 */
 	getLocale?: (
-		request: Request,
+		request: Request | undefined,
 	) =>
 		| Prettify<PrettifiedAvailableLocales<TCustomTranslations>>
 		| Promise<Prettify<PrettifiedAvailableLocales<TCustomTranslations>>>;
