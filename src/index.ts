@@ -76,6 +76,11 @@ export const localization = <
 		...translations,
 	} as Translations<TCustomTranslations>;
 
+	// const mergedTranslations = deepMergeTranslations(
+	// 	defaultTranslations,
+	// 	translations,
+	// );
+
 	const resolveLocale = getLocale
 		? async (request: Request) => {
 				try {
