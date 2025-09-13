@@ -1,5 +1,25 @@
 # better-auth-localization
 
+## 2.1.6
+
+### Patch Changes
+
+- Providing custom translations no longer override the whole translation for used language
+  Before when providing a custom translation for a specific error code, the whole translation for the language was overridden.
+
+  ```typescript
+  localization({
+    defaultLocale: "pt-BR",
+    translations: {
+      "pt-BR": {
+        USER_NOT_FOUND: "Usuário não encontrado",
+      },
+    },
+  });
+  ```
+
+  If any other error code happened, it would fallback to the default translation due to the code missing from the custom translation. Now it will just use the default translation.
+
 ## 2.1.5
 
 ### Patch Changes
