@@ -5,9 +5,8 @@ import type {
 	AvailableLocales,
 	LocalizationOptions,
 	PartialErrorCodesType,
-	Translations,
 } from "./types";
-import { hasBody, isErrorBody } from "./utils/helpers";
+import { deepMergeTranslations, hasBody, isErrorBody } from "./utils/helpers";
 import { getTranslation } from "./utils/translations";
 
 /**
@@ -71,15 +70,10 @@ export const localization = <
 	const currFallbackLocale =
 		fallbackLocale as AvailableLocales<TCustomTranslations>;
 
-	const mergedTranslations = {
-		...defaultTranslations,
-		...translations,
-	} as Translations<TCustomTranslations>;
-
-	// const mergedTranslations = deepMergeTranslations(
-	// 	defaultTranslations,
-	// 	translations,
-	// );
+	const mergedTranslations = deepMergeTranslations(
+		defaultTranslations,
+		translations,
+	);
 
 	const resolveLocale = getLocale
 		? async (request: Request) => {
