@@ -1,8 +1,9 @@
-import type { BetterAuthPlugin } from "better-auth";
+import type { BetterAuthPlugin, Status } from "better-auth";
 import { createAuthMiddleware } from "better-auth/plugins";
 import { defaultTranslations } from "./translations";
 import type {
 	AvailableLocales,
+	ErrorCodesType,
 	LocalizationOptions,
 	PartialErrorCodesType,
 } from "./types";
@@ -76,7 +77,7 @@ export const localization = <
 	);
 
 	const resolveLocale = getLocale
-		? async (request: Request) => {
+		? async (request: Request | undefined) => {
 				try {
 					const locale = (await getLocale(
 						request,
@@ -111,13 +112,11 @@ export const localization = <
 					handler: createAuthMiddleware(async (ctx) => {
 						const { request } = ctx;
 
-						if (!request) return;
-
 						const { returned } = ctx.context;
 
 						if (!hasBody(returned) || !isErrorBody(returned.body)) return;
 
-						const { body } = returned;
+						const { body, statusCode } = returned as { body: { code: keyof ErrorCodesType; message: string }; statusCode: Status };
 
 						const locale = await resolveLocale(request);
 
@@ -132,7 +131,9 @@ export const localization = <
 						);
 
 						if (translatedMessage) {
-							body.message = translatedMessage;
+							return ctx.error(statusCode || "UNPROCESSABLE_ENTITY", {
+								message: translatedMessage,
+							});
 						}
 					}),
 				},
