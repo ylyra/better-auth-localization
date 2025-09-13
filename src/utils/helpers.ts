@@ -38,22 +38,18 @@ export const deepMergeTranslations = <
 
 	const result: Record<string, PartialErrorCodesType> = {};
 
-	// First, copy all default translations
 	for (const [locale, translations] of Object.entries(defaultTranslations)) {
 		result[locale] = { ...translations };
 	}
 
-	// Then, merge custom translations at the individual key level
 	for (const [locale, customTranslation] of Object.entries(customTranslations)) {
 		if (customTranslation) {
 			if (result[locale]) {
-				// Merge with existing locale translations
 				result[locale] = {
 					...result[locale],
 					...customTranslation,
 				};
 			} else {
-				// New locale, just add it
 				result[locale] = { ...customTranslation };
 			}
 		}
