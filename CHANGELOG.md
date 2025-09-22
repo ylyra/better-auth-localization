@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.1.8
+
+### Patch Changes
+
+- fix: preserve original error codes in translations (thanks @tockawaffle)
+
 ## 2.1.7
 
 ### Patch Changes
