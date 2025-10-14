@@ -9,6 +9,7 @@ export const FA_IR = {
   USER_EMAIL_NOT_FOUND: "ایمیل کاربر یافت نشد",
   USER_ALREADY_HAS_PASSWORD:
     "کاربر قبلاً رمز عبور دارد. لطفاً رمز عبور فعلی را برای حذف حساب وارد کنید.",
+  USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "کاربر از قبل وجود دارد. از ایمیل دیگری استفاده کنید.",
 
   // Session related errors
   FAILED_TO_CREATE_SESSION: "ایجاد نشست ناموفق بود",

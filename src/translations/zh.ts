@@ -8,6 +8,7 @@ export const ZH_HANT = {
 	USER_ALREADY_EXISTS: "用戶已存在",
 	USER_EMAIL_NOT_FOUND: "找不到用戶的電子郵件",
 	USER_ALREADY_HAS_PASSWORD: "用戶已設置密碼。請提供該密碼以刪除帳戶。",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "用戶已存在。請使用其他電子郵件。",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "創建會話失敗",
@@ -46,6 +47,7 @@ export const ZH_HANS = {
 	USER_ALREADY_EXISTS: "此用户已存在",
 	USER_EMAIL_NOT_FOUND: "找不到此用户的电子邮件",
 	USER_ALREADY_HAS_PASSWORD: "此用户已设置密码。请提供该密码以删除账户。",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "此用户已存在。请使用其他电子邮件。",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "创建会话失败",

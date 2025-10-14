@@ -9,6 +9,7 @@ export const RU_RU = {
   USER_EMAIL_NOT_FOUND: "Email пользователя не найден",
   USER_ALREADY_HAS_PASSWORD:
     "У пользователя уже есть пароль. Укажите этот пароль для удаления аккаунта.",
+  USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Пользователь уже существует. Используйте другой email.",
 
   // Session related errors
   FAILED_TO_CREATE_SESSION: "Ошибка при создании сессии",

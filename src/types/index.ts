@@ -5,7 +5,7 @@ type Prettify<T> = {
 	[K in keyof T]: T[K];
 } & {};
 
-export type ErrorCodesType = Auth["$ERROR_CODES"];
+export type ErrorCodesType = Record<keyof Auth["$ERROR_CODES"], string>;
 /**
  * Partial better-auth error codes type for translations
  */
