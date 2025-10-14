@@ -9,6 +9,8 @@ export const PT_BR = {
 	USER_EMAIL_NOT_FOUND: "Email do usuário não encontrado",
 	USER_ALREADY_HAS_PASSWORD:
 		"Usuário já possui uma senha. Forneça-a para excluir a conta.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Usuário já existe. Use outro email.",
+
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Falha ao criar sessão",
@@ -49,6 +51,7 @@ export const PT_PT = {
 	USER_EMAIL_NOT_FOUND: "E-mail do utilizador não encontrado",
 	USER_ALREADY_HAS_PASSWORD:
 		"Utilizador já possui uma palavra-passe. Forneça-a para eliminar a conta.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Utilizador já existe. Use outro e-mail.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Falha ao criar sessão",

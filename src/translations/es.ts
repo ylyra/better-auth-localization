@@ -9,6 +9,7 @@ export const ES_ES = {
 	USER_EMAIL_NOT_FOUND: "Email del usuario no encontrado",
 	USER_ALREADY_HAS_PASSWORD:
 		"El usuario ya tiene una contraseña. Proporcione esa contraseña para eliminar la cuenta.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Usuario ya existe. Use otro email.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Error al crear sesión",
