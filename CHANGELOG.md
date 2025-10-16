@@ -1,5 +1,17 @@
 # better-auth-localization
 
+## 2.1.9
+
+### Patch Changes
+
+- Fix: Missing error USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL
+
+## 2.1.8
+
+### Patch Changes
+
+- fix: preserve original error codes in translations (thanks @tockawaffle)
+
 ## 2.1.7
 
 ### Patch Changes

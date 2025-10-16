@@ -136,6 +136,7 @@ export const localization = <
 						if (translatedMessage) {
 							return ctx.error(statusCode || "UNPROCESSABLE_ENTITY", {
 								message: translatedMessage,
+								code: body.code,
 							});
 						}
 					}),

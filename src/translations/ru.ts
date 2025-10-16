@@ -1,14 +1,15 @@
 import type { ErrorCodesType } from "../types";
 
 export const RU_RU = {
-	// User related errors
-	USER_NOT_FOUND: "Пользователь не найден",
-	FAILED_TO_CREATE_USER: "Ошибка при создании пользователя",
-	FAILED_TO_UPDATE_USER: "Ошибка при обновлении пользователя",
-	USER_ALREADY_EXISTS: "Пользователь уже существует",
-	USER_EMAIL_NOT_FOUND: "Email пользователя не найден",
-	USER_ALREADY_HAS_PASSWORD:
-		"У пользователя уже есть пароль. Укажите этот пароль для удаления аккаунта.",
+  // User related errors
+  USER_NOT_FOUND: "Пользователь не найден",
+  FAILED_TO_CREATE_USER: "Ошибка при создании пользователя",
+  FAILED_TO_UPDATE_USER: "Ошибка при обновлении пользователя",
+  USER_ALREADY_EXISTS: "Пользователь уже существует",
+  USER_EMAIL_NOT_FOUND: "Email пользователя не найден",
+  USER_ALREADY_HAS_PASSWORD:
+    "У пользователя уже есть пароль. Укажите этот пароль для удаления аккаунта.",
+  USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Пользователь уже существует. Используйте другой email.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Ошибка при создании сессии",

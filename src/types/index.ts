@@ -91,6 +91,7 @@ export type ErrorCodesType = Prettify<
   | MultiSessionErrorCodesType
   | PasskeyErrorCodesType
 >;
+export type ErrorCodesType = Record<keyof Auth["$ERROR_CODES"], string>;
 /**
  * Partial better-auth error codes type for translations
  */
