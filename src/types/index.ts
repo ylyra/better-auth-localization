@@ -1,5 +1,10 @@
+
 import type { Auth } from "better-auth";
 import type {
+	AdminOptions,
+	OrganizationOptions,
+	TWO_FACTOR_ERROR_CODES,
+	USERNAME_ERROR_CODES,
 	admin,
 	anonymous,
 	apiKey,
@@ -8,11 +13,8 @@ import type {
 	genericOAuth,
 	haveIBeenPwned,
 	multiSession,
-	OrganizationOptions,
 	organization,
-	phoneNumber,
-	TWO_FACTOR_ERROR_CODES,
-	USERNAME_ERROR_CODES,
+	phoneNumber
 } from "better-auth/plugins";
 import type { passkey } from "better-auth/plugins/passkey";
 import type { defaultTranslations } from "../translations";
@@ -25,73 +27,68 @@ type RemoveReadonly<T> = {
 	-readonly [K in keyof T]: string;
 };
 
-type AuthErrorCodesType = Auth["$ERROR_CODES"];
+type RemoveReadonlyFromUnion<T> = T extends any ? RemoveReadonly<T> : never;
 
-type OrganizationErrorCodesType = RemoveReadonly<
+type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (k: infer I) => void ? I : never;
+
+type AuthErrorCodesType = Auth["$ERROR_CODES"]
+
+type OrganizationErrorCodesType = 
 	ReturnType<typeof organization<OrganizationOptions>>["$ERROR_CODES"]
->;
 
-type TwoFactorErrorCodesType = RemoveReadonly<typeof TWO_FACTOR_ERROR_CODES>;
+type TwoFactorErrorCodesType = typeof TWO_FACTOR_ERROR_CODES
 
-type UsernameErrorCodesType = RemoveReadonly<typeof USERNAME_ERROR_CODES>;
+type UsernameErrorCodesType = typeof USERNAME_ERROR_CODES
 
-type AnonymousErrorCodesType = RemoveReadonly<
+type AnonymousErrorCodesType = 
 	ReturnType<typeof anonymous>["$ERROR_CODES"]
->;
 
-type PhoneNumberErrorCodesType = RemoveReadonly<
+type PhoneNumberErrorCodesType = 
 	ReturnType<typeof phoneNumber>["$ERROR_CODES"]
->;
 
-type EmailOTPErrorCodesType = RemoveReadonly<
+type EmailOTPErrorCodesType = 
 	ReturnType<typeof emailOTP>["$ERROR_CODES"]
->;
 
-type GenericOAuthErrorCodesType = RemoveReadonly<
+type GenericOAuthErrorCodesType = 
 	ReturnType<typeof genericOAuth>["$ERROR_CODES"]
->;
 
-type AdminErrorCodesType = RemoveReadonly<
-	ReturnType<typeof admin>["$ERROR_CODES"]
->;
+type AdminErrorCodesType = 
+	ReturnType<typeof admin<AdminOptions>>["$ERROR_CODES"]
 
-type ApiKeyErrorCodesType = RemoveReadonly<
+type ApiKeyErrorCodesType = 
 	ReturnType<typeof apiKey>["$ERROR_CODES"]
->;
 
-type DeviceAuthorizationErrorCodesType = RemoveReadonly<
+type DeviceAuthorizationErrorCodesType = 
 	ReturnType<typeof deviceAuthorization>["$ERROR_CODES"]
->;
 
-type HaveIBeenPwnedErrorCodesType = RemoveReadonly<
+type HaveIBeenPwnedErrorCodesType = 
 	ReturnType<typeof haveIBeenPwned>["$ERROR_CODES"]
->;
 
-type MultiSessionErrorCodesType = RemoveReadonly<
+type MultiSessionErrorCodesType = 
 	ReturnType<typeof multiSession>["$ERROR_CODES"]
->;
 
-type PasskeyErrorCodesType = RemoveReadonly<
+type PasskeyErrorCodesType = 
 	ReturnType<typeof passkey>["$ERROR_CODES"]
->;
 
-export type ErrorCodesType = Prettify<
-	| AuthErrorCodesType
-	| OrganizationErrorCodesType
-	| TwoFactorErrorCodesType
-	| UsernameErrorCodesType
-	| AnonymousErrorCodesType
-	| PhoneNumberErrorCodesType
-	| EmailOTPErrorCodesType
-	| GenericOAuthErrorCodesType
-	| AdminErrorCodesType
-	| ApiKeyErrorCodesType
-	| DeviceAuthorizationErrorCodesType
-	| HaveIBeenPwnedErrorCodesType
-	| MultiSessionErrorCodesType
-	| PasskeyErrorCodesType
->;
-/**
+export type ErrorCodesType = Partial<UnionToIntersection<
+	RemoveReadonlyFromUnion<
+		| AuthErrorCodesType
+		| OrganizationErrorCodesType
+		| TwoFactorErrorCodesType
+		| UsernameErrorCodesType
+		| AnonymousErrorCodesType
+		| PhoneNumberErrorCodesType
+		| EmailOTPErrorCodesType
+		| GenericOAuthErrorCodesType
+		| AdminErrorCodesType
+		| ApiKeyErrorCodesType
+		| DeviceAuthorizationErrorCodesType
+		| HaveIBeenPwnedErrorCodesType
+		| MultiSessionErrorCodesType
+		| PasskeyErrorCodesType
+	>
+>>
+	/**
  * Partial better-auth error codes type for translations
  */
 export type PartialErrorCodesType = Partial<ErrorCodesType>;
