@@ -55,11 +55,19 @@ import { getTranslation } from "./utils/translations";
  * })
  * ```
  */
-export const localization = <
+export function localization<
 	TCustomTranslations extends Record<string, PartialErrorCodesType> = {},
 >(
 	options: LocalizationOptions<TCustomTranslations>,
-) => {
+): {
+	id: string;
+	hooks: {
+		after: Array<{
+			matcher: (ctx: any) => boolean;
+			handler: ReturnType<typeof createAuthMiddleware>;
+		}>;
+	};
+} {
 	const {
 		defaultLocale = "default",
 		fallbackLocale = "default",
@@ -136,7 +144,7 @@ export const localization = <
 						if (translatedMessage) {
 							return ctx.error(statusCode || "UNPROCESSABLE_ENTITY", {
 								message: translatedMessage,
-								code: body.code,
+								code: String(body.code),
 							});
 						}
 					}),
@@ -144,7 +152,7 @@ export const localization = <
 			],
 		},
 	} satisfies BetterAuthPlugin;
-};
+}
 
 export { betterAuthLocalizationClientPlugin } from "./client";
 export type {
