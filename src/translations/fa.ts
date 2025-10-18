@@ -1,15 +1,16 @@
 import type { ErrorCodesType } from "../types";
 
 export const FA_IR = {
-  // User related errors
-  USER_NOT_FOUND: "کاربر یافت نشد",
-  FAILED_TO_CREATE_USER: "ایجاد حساب کاربری ناموفق بود",
-  FAILED_TO_UPDATE_USER: "به‌روزرسانی اطلاعات کاربر ناموفق بود",
-  USER_ALREADY_EXISTS: "کاربر از قبل وجود دارد",
-  USER_EMAIL_NOT_FOUND: "ایمیل کاربر یافت نشد",
-  USER_ALREADY_HAS_PASSWORD:
-    "کاربر قبلاً رمز عبور دارد. لطفاً رمز عبور فعلی را برای حذف حساب وارد کنید.",
-  USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "کاربر از قبل وجود دارد. از ایمیل دیگری استفاده کنید.",
+	// User related errors
+	USER_NOT_FOUND: "کاربر یافت نشد",
+	FAILED_TO_CREATE_USER: "ایجاد حساب کاربری ناموفق بود",
+	FAILED_TO_UPDATE_USER: "به‌روزرسانی اطلاعات کاربر ناموفق بود",
+	USER_ALREADY_EXISTS: "کاربر از قبل وجود دارد",
+	USER_EMAIL_NOT_FOUND: "ایمیل کاربر یافت نشد",
+	USER_ALREADY_HAS_PASSWORD:
+		"کاربر قبلاً رمز عبور دارد. لطفاً رمز عبور فعلی را برای حذف حساب وارد کنید.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"کاربر از قبل وجود دارد. از ایمیل دیگری استفاده کنید.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "ایجاد نشست ناموفق بود",
