@@ -1,4 +1,3 @@
-
 import type { Auth } from "better-auth";
 import type {
 	AdminOptions,
@@ -14,7 +13,7 @@ import type {
 	haveIBeenPwned,
 	multiSession,
 	organization,
-	phoneNumber
+	phoneNumber,
 } from "better-auth/plugins";
 import type { passkey } from "better-auth/plugins/passkey";
 import type { defaultTranslations } from "../translations";
@@ -27,68 +26,77 @@ type RemoveReadonly<T> = {
 	-readonly [K in keyof T]: string;
 };
 
+// biome-ignore lint/suspicious/noExplicitAny: biome is dumb
 type RemoveReadonlyFromUnion<T> = T extends any ? RemoveReadonly<T> : never;
 
-type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (k: infer I) => void ? I : never;
+// biome-ignore lint/suspicious/noExplicitAny: biome is dumb
+type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (
+	k: infer I,
+) => void
+	? I
+	: never;
 
-type AuthErrorCodesType = Auth["$ERROR_CODES"]
+type AuthErrorCodesType = Auth["$ERROR_CODES"];
 
-type OrganizationErrorCodesType = 
-	ReturnType<typeof organization<OrganizationOptions>>["$ERROR_CODES"]
+type OrganizationErrorCodesType = ReturnType<
+	typeof organization<OrganizationOptions>
+>["$ERROR_CODES"];
 
-type TwoFactorErrorCodesType = typeof TWO_FACTOR_ERROR_CODES
+type TwoFactorErrorCodesType = typeof TWO_FACTOR_ERROR_CODES;
 
-type UsernameErrorCodesType = typeof USERNAME_ERROR_CODES
+type UsernameErrorCodesType = typeof USERNAME_ERROR_CODES;
 
-type AnonymousErrorCodesType = 
-	ReturnType<typeof anonymous>["$ERROR_CODES"]
+type AnonymousErrorCodesType = ReturnType<typeof anonymous>["$ERROR_CODES"];
 
-type PhoneNumberErrorCodesType = 
-	ReturnType<typeof phoneNumber>["$ERROR_CODES"]
+type PhoneNumberErrorCodesType = ReturnType<typeof phoneNumber>["$ERROR_CODES"];
 
-type EmailOTPErrorCodesType = 
-	ReturnType<typeof emailOTP>["$ERROR_CODES"]
+type EmailOTPErrorCodesType = ReturnType<typeof emailOTP>["$ERROR_CODES"];
 
-type GenericOAuthErrorCodesType = 
-	ReturnType<typeof genericOAuth>["$ERROR_CODES"]
+type GenericOAuthErrorCodesType = ReturnType<
+	typeof genericOAuth
+>["$ERROR_CODES"];
 
-type AdminErrorCodesType = 
-	ReturnType<typeof admin<AdminOptions>>["$ERROR_CODES"]
+type AdminErrorCodesType = ReturnType<
+	typeof admin<AdminOptions>
+>["$ERROR_CODES"];
 
-type ApiKeyErrorCodesType = 
-	ReturnType<typeof apiKey>["$ERROR_CODES"]
+type ApiKeyErrorCodesType = ReturnType<typeof apiKey>["$ERROR_CODES"];
 
-type DeviceAuthorizationErrorCodesType = 
-	ReturnType<typeof deviceAuthorization>["$ERROR_CODES"]
+type DeviceAuthorizationErrorCodesType = ReturnType<
+	typeof deviceAuthorization
+>["$ERROR_CODES"];
 
-type HaveIBeenPwnedErrorCodesType = 
-	ReturnType<typeof haveIBeenPwned>["$ERROR_CODES"]
+type HaveIBeenPwnedErrorCodesType = ReturnType<
+	typeof haveIBeenPwned
+>["$ERROR_CODES"];
 
-type MultiSessionErrorCodesType = 
-	ReturnType<typeof multiSession>["$ERROR_CODES"]
+type MultiSessionErrorCodesType = ReturnType<
+	typeof multiSession
+>["$ERROR_CODES"];
 
-type PasskeyErrorCodesType = 
-	ReturnType<typeof passkey>["$ERROR_CODES"]
+type PasskeyErrorCodesType = ReturnType<typeof passkey>["$ERROR_CODES"];
 
-export type ErrorCodesType = Partial<UnionToIntersection<
-	RemoveReadonlyFromUnion<
-		| AuthErrorCodesType
-		| OrganizationErrorCodesType
-		| TwoFactorErrorCodesType
-		| UsernameErrorCodesType
-		| AnonymousErrorCodesType
-		| PhoneNumberErrorCodesType
-		| EmailOTPErrorCodesType
-		| GenericOAuthErrorCodesType
-		| AdminErrorCodesType
-		| ApiKeyErrorCodesType
-		| DeviceAuthorizationErrorCodesType
-		| HaveIBeenPwnedErrorCodesType
-		| MultiSessionErrorCodesType
-		| PasskeyErrorCodesType
+export type ErrorCodesType = Partial<
+	UnionToIntersection<
+		RemoveReadonlyFromUnion<
+			| AuthErrorCodesType
+			| OrganizationErrorCodesType
+			| TwoFactorErrorCodesType
+			| UsernameErrorCodesType
+			| AnonymousErrorCodesType
+			| PhoneNumberErrorCodesType
+			| EmailOTPErrorCodesType
+			| GenericOAuthErrorCodesType
+			| AdminErrorCodesType
+			| ApiKeyErrorCodesType
+			| DeviceAuthorizationErrorCodesType
+			| HaveIBeenPwnedErrorCodesType
+			| MultiSessionErrorCodesType
+			| PasskeyErrorCodesType
+		>
 	>
->>
-	/**
+>;
+/**
  * Partial better-auth error codes type for translations
  */
 export type PartialErrorCodesType = Partial<ErrorCodesType>;
@@ -101,7 +109,9 @@ export type BuiltInLocales = keyof typeof defaultTranslations | "default";
 /**
  * Extract custom locales from a translations object
  */
-export type ExtractCustomLocales<T> = T extends Record<infer K, any>
+
+// biome-ignore lint/suspicious/noExplicitAny: biome is dumb
+export  type ExtractCustomLocales<T> = T extends Record<infer K, any>
 	? Exclude<K, BuiltInLocales>
 	: never;
 
@@ -113,6 +123,7 @@ export type PrettifiedAvailableLocales<TCustomTranslations> = Prettify<
 >;
 
 export type Translations<
+	// biome-ignore lint/complexity/noBannedTypes: biome is dumb
 	TCustomTranslations extends Record<string, PartialErrorCodesType> = {},
 > = {
 	[K in BuiltInLocales | keyof TCustomTranslations]?: PartialErrorCodesType;
@@ -121,6 +132,7 @@ export type Translations<
  * Options for the localization plugin
  */
 export type LocalizationOptions<
+// biome-ignore lint/complexity/noBannedTypes: biome is dumb
 	TCustomTranslations extends Record<string, PartialErrorCodesType> = {},
 > = {
 	/**
