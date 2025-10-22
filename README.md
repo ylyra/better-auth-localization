@@ -148,7 +148,7 @@ The plugin comes with built-in translations for all Better Auth error codes:
 - Social authentication errors
 - Account management errors
 
-For a complete and specific list, refer to the [Better Auth documentation](https://github.com/better-auth/better-auth/blob/canary/packages/better-auth/src/error/codes.ts).
+For a complete and specific list, refer to the [Better Auth documentation](https://github.com/better-auth/better-auth/blob/canary/packages/core/src/error/codes.ts).
 
 ## Contributing
 
