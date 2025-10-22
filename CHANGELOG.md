@@ -1,5 +1,11 @@
 # better-auth-localization
 
+## 2.1.10
+
+### Patch Changes
+
+- Added support for ro-RO (Romanian) (thanks @danielavornic)
+
 ## 2.1.9
 
 ### Patch Changes
