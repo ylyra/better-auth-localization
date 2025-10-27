@@ -104,7 +104,6 @@ function getPluginErrorCodeType(pluginName) {
 		'admin': 'AdminErrorCodesType',
 		'anonymous': 'AnonymousErrorCodesType',
 		'api-key': 'ApiKeyErrorCodesType',
-		'auth': 'AuthErrorCodesType',
 		'device-authorization': 'DeviceAuthorizationErrorCodesType',
 		'email-otp': 'EmailOTPErrorCodesType',
 		'generic-oauth': 'GenericOAuthErrorCodesType',
