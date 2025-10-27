@@ -1,35 +1,12 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 const prompts = require("prompts");
 
 const projectRoot = path.resolve(__dirname, "..");
 const translationsDir = path.join(projectRoot, "src", "translations");
 const pluginsDir = path.join(translationsDir, "plugins");
-
-const locales = [
-	"pt_BR", "pt_PT", "pt_AO", "pt_MZ", "pt_GW", "pt_CV", "pt_ST", "pt_TL",
-	"es_ES", "es_MX", "es_AR", "es_CL", "es_CO", "es_PE", "es_VE", "es_EC", "es_UY", "es_BO",
-	"es_DO", "es_PY", "es_CR", "es_PA", "es_GT", "es_SV", "es_NI", "es_HN", "es_PR",
-	"fr_FR", "fr_CA", "fr_BE", "fr_CH", "fr_LU", "fr_MC", "fr_SN", "fr_MA", "fr_TN", "fr_DZ",
-	"de_DE", "de_AT", "de_CH", "de_LU", "de_BE",
-	"it_IT", "it_CH", "it_SM", "it_VA",
-	"nl_NL", "nl_BE", "nl_SR", "nl_CW",
-	"ru_RU", "ru_UA", "ru_KZ", "ru_BY", "ru_KG",
-	"ar_SA", "ar_EG", "ar_AE", "ar_DZ", "ar_MA", "ar_TN", "ar_LB", "ar_SY", "ar_JO", "ar_IQ",
-	"ar_KW", "ar_QA", "ar_BH", "ar_OM", "ar_SD", "ar_LY", "ar_YE",
-	"zh_CN", "zh_TW", "zh_HK", "zh_SG", "zh_MO",
-	"ja_JP",
-	"ko_KR",
-	"hi_IN",
-	"bn_BD", "bn_IN",
-	"tr_TR", "tr_CY",
-	"fa_IR", "fa_AF",
-	"sw_KE", "sw_TZ", "sw_UG",
-	"pl_PL", "cs_CZ", "sk_SK", "hu_HU", "fi_FI", "sv_SE", "no_NO", "da_DK", "is_IS",
-	"el_GR", "he_IL", "th_TH", "vi_VN", "id_ID", "ms_MY", "ta_IN", "ur_PK"
-]
 
 function getPluginDirectories() {
 	const dirs = fs
@@ -220,7 +197,7 @@ async function addLocaleToPluginFiles(newLocale) {
 async function main() {
 	try {
 		const { newLocale } = await prompts({
-			type: 'autocomplete',
+			type: 'text',
 			name: 'newLocale',
 			message: 'Select the new locale to create:',
 			choices: locales.map(pattern => ({
