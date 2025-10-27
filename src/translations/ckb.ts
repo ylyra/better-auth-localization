@@ -42,5 +42,5 @@ export const CKB_IQ = {
 } satisfies ErrorCodesType;
 
 export const LOCALES = {
-	"ckb-iq": CKB_IQ,
+	"ckb-IQ": CKB_IQ,
 } as const;
