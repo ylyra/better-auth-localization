@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const RO_RO = {
+export const RO_RO = createTranslationObject("ro-RO", {
 	// User related errors
 	USER_NOT_FOUND: "Utilizatorul nu a fost găsit",
 	FAILED_TO_CREATE_USER: "Eroare la crearea utilizatorului",
@@ -39,7 +39,7 @@ export const RO_RO = {
 	EMAIL_CAN_NOT_BE_UPDATED: "Email-ul nu poate fi actualizat",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Nu se poate deconecta ultimul cont",
 	ACCOUNT_NOT_FOUND: "Contul nu a fost găsit",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"ro-RO": RO_RO,

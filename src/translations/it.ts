@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const IT_IT = {
+export const IT_IT = createTranslationObject("it-IT", {
 	// User related errors
 	USER_NOT_FOUND: "Utente non trovato",
 	FAILED_TO_CREATE_USER: "Errore nella creazione dell'utente",
@@ -40,7 +40,7 @@ export const IT_IT = {
 	EMAIL_CAN_NOT_BE_UPDATED: "L'email non può essere aggiornata",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Non puoi scollegare il tuo ultimo account",
 	ACCOUNT_NOT_FOUND: "Account non trovato",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"it-IT": IT_IT,

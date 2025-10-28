@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const KO_KO = {
+export const KO_KO = createTranslationObject("ko-KR", {
 	// User related errors
 	USER_NOT_FOUND: "사용자를 찾을 수 없습니다",
 	FAILED_TO_CREATE_USER: "사용자 생성 실패",
@@ -40,7 +40,7 @@ export const KO_KO = {
 	EMAIL_CAN_NOT_BE_UPDATED: "이메일을 업데이트할 수 없습니다",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "마지막 계정의 연결을 해제할 수 없습니다",
 	ACCOUNT_NOT_FOUND: "계정을 찾을 수 없습니다",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"ko-KR": KO_KO,

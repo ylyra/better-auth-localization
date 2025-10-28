@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const ID_ID = {
+export const ID_ID = createTranslationObject("id-ID", {
 	// User related errors
 	USER_NOT_FOUND: "Pengguna tidak ditemukan",
 	FAILED_TO_CREATE_USER: "Gagal membuat pengguna",
@@ -41,7 +41,7 @@ export const ID_ID = {
 	FAILED_TO_UNLINK_LAST_ACCOUNT:
 		"Anda tidak dapat menghapus tautan akun terakhir Anda",
 	ACCOUNT_NOT_FOUND: "Akun tidak ditemukan",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"id-ID": ID_ID,

@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const FR_FR = {
+export const FR_FR = createTranslationObject("fr-FR", {
 	// User related errors
 	USER_NOT_FOUND: "Utilisateur non trouvé",
 	FAILED_TO_CREATE_USER: "Échec de la création de l'utilisateur",
@@ -42,7 +42,7 @@ export const FR_FR = {
 	FAILED_TO_UNLINK_LAST_ACCOUNT:
 		"Vous ne pouvez pas dissocier votre dernier compte",
 	ACCOUNT_NOT_FOUND: "Compte non trouvé",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"fr-FR": FR_FR,

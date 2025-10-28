@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const MR_MR = {
+export const MR_MR = createTranslationObject("mr-MR", {
 	// User related errors
 	USER_NOT_FOUND: "वापरकर्ता सापडला नाही",
 	FAILED_TO_CREATE_USER: "वापरकर्ता तयार करण्यात अयशस्वी",
@@ -39,7 +39,7 @@ export const MR_MR = {
 	EMAIL_CAN_NOT_BE_UPDATED: "ईमेल अद्यतनित करता येत नाही",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "शेवटचे खाते अनलिंक करण्यात अयशस्वी",
 	ACCOUNT_NOT_FOUND: "खाते सापडले नाही",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"mr-MR": MR_MR,

@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const AR_SA = {
+export const AR_SA = createTranslationObject("ar-SA", {
 	// User related errors
 	USER_NOT_FOUND: "المستخدم غير موجود",
 	FAILED_TO_CREATE_USER: "فشل في إنشاء حساب المستخدم",
@@ -40,7 +40,7 @@ export const AR_SA = {
 	EMAIL_CAN_NOT_BE_UPDATED: "لا يمكن تحديث البريد الإلكتروني",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "لا يمكن إلغاء ربط الحساب الأخير",
 	ACCOUNT_NOT_FOUND: "الحساب غير موجود",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"ar-SA": AR_SA,

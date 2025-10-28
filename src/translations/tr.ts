@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const TR_TR = {
+export const TR_TR = createTranslationObject("tr-TR", {
 	// User related errors
 	USER_NOT_FOUND: "Kullanıcı bulunamadı",
 	FAILED_TO_CREATE_USER: "Kullanıcı oluşturulamadı",
@@ -40,7 +40,7 @@ export const TR_TR = {
 	EMAIL_CAN_NOT_BE_UPDATED: "E-posta adresi güncellenemedi",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Son hesabın bağlantısını kaldıramazsınız",
 	ACCOUNT_NOT_FOUND: "Hesap bulunamadı",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"tr-TR": TR_TR,

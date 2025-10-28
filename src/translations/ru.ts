@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const RU_RU = {
+export const RU_RU = createTranslationObject("ru-RU", {
 	// User related errors
 	USER_NOT_FOUND: "Пользователь не найден",
 	FAILED_TO_CREATE_USER: "Ошибка при создании пользователя",
@@ -40,7 +40,7 @@ export const RU_RU = {
 	EMAIL_CAN_NOT_BE_UPDATED: "Email нельзя обновить",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Нельзя отвязать последний аккаунт",
 	ACCOUNT_NOT_FOUND: "Аккаунт не найден",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"ru-RU": RU_RU,

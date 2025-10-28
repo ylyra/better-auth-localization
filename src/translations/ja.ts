@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const JA_JP = {
+export const JA_JP = createTranslationObject("ja-JP", {
 	// User related errors
 	USER_NOT_FOUND: "ユーザーが見つかりません",
 	FAILED_TO_CREATE_USER: "ユーザーの作成に失敗しました",
@@ -40,7 +40,7 @@ export const JA_JP = {
 	EMAIL_CAN_NOT_BE_UPDATED: "メールアドレスを更新できません",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "最後のアカウントの連携を解除できません",
 	ACCOUNT_NOT_FOUND: "アカウントが見つかりません",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"ja-JP": JA_JP,

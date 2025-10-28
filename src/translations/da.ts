@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const DA_DK = {
+export const DA_DK = createTranslationObject("da-DK", {
 	// User related errors
 	USER_NOT_FOUND: "Brugeren blev ikke fundet",
 	FAILED_TO_CREATE_USER: "Fejl under oprettelse af bruger",
@@ -38,7 +38,7 @@ export const DA_DK = {
 	EMAIL_CAN_NOT_BE_UPDATED: "E-mailen kan ikke opdateres",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Fejl ved afkobling af sidste konto",
 	ACCOUNT_NOT_FOUND: "Kontoen blev ikke fundet",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"da-DK": DA_DK,

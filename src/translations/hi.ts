@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const HI_HI = {
+export const HI_HI = createTranslationObject("hi-HI", {
 	// User related errors
 	USER_NOT_FOUND: "उपयोगकर्ता नहीं मिला",
 	FAILED_TO_CREATE_USER: "उपयोगकर्ता बनाने में विफल",
@@ -40,7 +40,7 @@ export const HI_HI = {
 	EMAIL_CAN_NOT_BE_UPDATED: "ईमेल अपडेट नहीं किया जा सकता",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "आखिरी खाते का लिंक हटाने में विफल",
 	ACCOUNT_NOT_FOUND: "खाता नहीं मिला",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"hi-HI": HI_HI,

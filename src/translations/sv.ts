@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const SV_SE = {
+export const SV_SE = createTranslationObject("sv-SE", {
 	// User related errors
 	USER_NOT_FOUND: "Användaren hittades inte",
 	FAILED_TO_CREATE_USER: "Lyckades inte skapa användare",
@@ -38,7 +38,7 @@ export const SV_SE = {
 	EMAIL_CAN_NOT_BE_UPDATED: "E-postadress kan inte uppdateras",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Du kan inte koppla bort det sista kontot",
 	ACCOUNT_NOT_FOUND: "Konto hittades inte",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"sv-SE": SV_SE,

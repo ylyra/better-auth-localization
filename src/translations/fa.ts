@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const FA_IR = {
+export const FA_IR = createTranslationObject("fa-IR", {
 	// User related errors
 	USER_NOT_FOUND: "کاربر یافت نشد",
 	FAILED_TO_CREATE_USER: "ایجاد حساب کاربری ناموفق بود",
@@ -39,7 +39,7 @@ export const FA_IR = {
 	EMAIL_CAN_NOT_BE_UPDATED: "امکان به‌روزرسانی ایمیل وجود ندارد",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "امکان قطع پیوند آخرین حساب وجود ندارد",
 	ACCOUNT_NOT_FOUND: "حساب یافت نشد",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"fa-IR": FA_IR,

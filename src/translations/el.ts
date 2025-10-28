@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const EL_GR = {
+export const EL_GR = createTranslationObject("el-GR", {
 	// User related errors
 	USER_NOT_FOUND: "Ο χρήστης δεν υπάρχει",
 	FAILED_TO_CREATE_USER: "Αποτυχία δημιουργίας χρήστη",
@@ -40,7 +40,7 @@ export const EL_GR = {
 	FAILED_TO_UNLINK_LAST_ACCOUNT:
 		"Αποτυχία αποσύνδεσης του τελευταίου λογαριασμού",
 	ACCOUNT_NOT_FOUND: "Ο λογαριασμός δεν βρέθηκε",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"el-GR": EL_GR,
