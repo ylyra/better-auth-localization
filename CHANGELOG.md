@@ -1,5 +1,13 @@
 # better-auth-localization
 
+## 2.2.0
+
+### Minor Changes
+
+- - Added support for translations in plugins (thanks @ylyra)
+  - To contribute a new language, just run `pnpm generate:locale` and enter the language code, it will generate the new language files for you to edit and add translations (@ylyra is the best)
+  - Added support for ckb-IQ (Kurdish Sorani) (thanks @didar-dev)
+
 ## 2.1.10
 
 ### Patch Changes
