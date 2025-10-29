@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const PL_PL = {
+export const PL_PL = createTranslationObject("pl-PL", {
 	// User related errors
 	USER_NOT_FOUND: "Nie znaleziono użytkownika",
 	FAILED_TO_CREATE_USER: "Wystąpił problem podczas tworzenia użytkownika",
@@ -8,7 +8,8 @@ export const PL_PL = {
 	USER_ALREADY_EXISTS: "Użytkownik już istnieje",
 	USER_EMAIL_NOT_FOUND: "Nie znaleziono adresu email",
 	USER_ALREADY_HAS_PASSWORD: "Użytkownik już posiada ustawione hasło",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Użytkownik już istnieje. Użyj innego adresu email.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Użytkownik już istnieje. Użyj innego adresu email.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Wystąpił problem podczas tworzenia sesji",
@@ -39,7 +40,7 @@ export const PL_PL = {
 	EMAIL_CAN_NOT_BE_UPDATED: "Nie można zaktulizować adresu email",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Nie możesz odłączyć swojego ostatniego konta",
 	ACCOUNT_NOT_FOUND: "Nie znaleziono konta",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"pl-PL": PL_PL,

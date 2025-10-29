@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const TR_TR = {
+export const TR_TR = createTranslationObject("tr-TR", {
 	// User related errors
 	USER_NOT_FOUND: "Kullanıcı bulunamadı",
 	FAILED_TO_CREATE_USER: "Kullanıcı oluşturulamadı",
@@ -9,7 +9,8 @@ export const TR_TR = {
 	USER_EMAIL_NOT_FOUND: "Kullanıcı e-posta adresi bulunamadı",
 	USER_ALREADY_HAS_PASSWORD:
 		"Kullanıcının zaten bir şifresi var. Hesabı silmek için lütfen şifreyi girin.",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Kullanıcı zaten mevcut. Başka bir e-posta adresi kullanın.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Kullanıcı zaten mevcut. Başka bir e-posta adresi kullanın.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Oturum oluşturulamadı",
@@ -39,7 +40,7 @@ export const TR_TR = {
 	EMAIL_CAN_NOT_BE_UPDATED: "E-posta adresi güncellenemedi",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Son hesabın bağlantısını kaldıramazsınız",
 	ACCOUNT_NOT_FOUND: "Hesap bulunamadı",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"tr-TR": TR_TR,

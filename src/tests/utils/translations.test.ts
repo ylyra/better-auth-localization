@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { createTranslationObject } from "../../utils/create-translation-object";
 import { getTranslation } from "../../utils/translations";
 
 describe("getTranslation", () => {
@@ -68,7 +69,8 @@ describe("getTranslation", () => {
 
 	it("should return error code when translation not found and no original message", () => {
 		const result = getTranslation(
-			"SOME_UNKNOWN_ERROR" as any,
+			// @ts-expect-error - This is a test
+			"SOME_UNKNOWN_ERROR",
 			"pt-BR",
 			"default",
 			mockTranslations,
@@ -78,10 +80,32 @@ describe("getTranslation", () => {
 
 	it("should handle when locale exists but translation key does not", () => {
 		const result = getTranslation(
-			"NON_EXISTENT_KEY" as any,
+			// @ts-expect-error - This is a test
+			"NON_EXISTENT_KEY",
 			"pt-BR",
 			"default",
 			mockTranslations,
+			"Original message",
+		);
+		expect(result).toBe("Original message");
+	});
+
+	it("should return translated message for plugin translations", () => {
+		const result = getTranslation("ACCESS_DENIED", "pt-BR", "default", {
+			"pt-BR": createTranslationObject("pt-BR", {}),
+		});
+		console.log({ result });
+		expect(result).toBe("Acesso negado");
+	});
+
+	it("should return fallback translation for missing plugin translations", () => {
+		const result = getTranslation(
+			"ACCESS_DENIED",
+			"es-ES",
+			"default",
+			{
+				"pt-BR": createTranslationObject("pt-BR", {}),
+			},
 			"Original message",
 		);
 		expect(result).toBe("Original message");

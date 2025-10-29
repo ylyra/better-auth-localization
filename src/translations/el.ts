@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const EL_GR = {
+export const EL_GR = createTranslationObject("el-GR", {
 	// User related errors
 	USER_NOT_FOUND: "Ο χρήστης δεν υπάρχει",
 	FAILED_TO_CREATE_USER: "Αποτυχία δημιουργίας χρήστη",
@@ -8,7 +8,8 @@ export const EL_GR = {
 	USER_ALREADY_EXISTS: "Ο χρήστης υπάρχει ήδη",
 	USER_EMAIL_NOT_FOUND: "Το email του χρήστη δεν βρέθηκε",
 	USER_ALREADY_HAS_PASSWORD: "Ο χρήστης έχει ήδη κωδικό",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Ο χρήστης υπάρχει ήδη. Χρησιμοποιήστε άλλο email.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Ο χρήστης υπάρχει ήδη. Χρησιμοποιήστε άλλο email.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Αποτυχία δημιουργίας συνεδρίας",
@@ -39,7 +40,7 @@ export const EL_GR = {
 	FAILED_TO_UNLINK_LAST_ACCOUNT:
 		"Αποτυχία αποσύνδεσης του τελευταίου λογαριασμού",
 	ACCOUNT_NOT_FOUND: "Ο λογαριασμός δεν βρέθηκε",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"el-GR": EL_GR,

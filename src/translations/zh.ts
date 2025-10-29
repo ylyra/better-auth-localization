@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const ZH_HANT = {
+export const ZH_HANT = createTranslationObject("zh-Hant", {
 	// User related errors
 	USER_NOT_FOUND: "找不到用戶",
 	FAILED_TO_CREATE_USER: "創建用戶失敗",
@@ -37,9 +37,9 @@ export const ZH_HANT = {
 	EMAIL_CAN_NOT_BE_UPDATED: "無法更新電子郵件",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "無法解除最後一個帳戶的連結",
 	ACCOUNT_NOT_FOUND: "找不到帳戶",
-} satisfies ErrorCodesType;
+});
 
-export const ZH_HANS = {
+export const ZH_HANS = createTranslationObject("zh-Hans", {
 	// User related errors
 	USER_NOT_FOUND: "找不到此用户",
 	FAILED_TO_CREATE_USER: "创建用户失败",
@@ -76,7 +76,7 @@ export const ZH_HANS = {
 	EMAIL_CAN_NOT_BE_UPDATED: "无法更新电子邮件",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "无法解除最后一个账户的链接",
 	ACCOUNT_NOT_FOUND: "找不到账户",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"zh-Hant": ZH_HANT,

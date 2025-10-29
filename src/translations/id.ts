@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const ID_ID = {
+export const ID_ID = createTranslationObject("id-ID", {
 	// User related errors
 	USER_NOT_FOUND: "Pengguna tidak ditemukan",
 	FAILED_TO_CREATE_USER: "Gagal membuat pengguna",
@@ -9,7 +9,8 @@ export const ID_ID = {
 	USER_EMAIL_NOT_FOUND: "Email pengguna tidak ditemukan",
 	USER_ALREADY_HAS_PASSWORD:
 		"Pengguna sudah memiliki kata sandi. Gunakan kata sandi sebelumnya untuk menghapus akun.",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Pengguna sudah ada. Gunakan email lain.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Pengguna sudah ada. Gunakan email lain.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Gagal membuat sesi",
@@ -40,7 +41,7 @@ export const ID_ID = {
 	FAILED_TO_UNLINK_LAST_ACCOUNT:
 		"Anda tidak dapat menghapus tautan akun terakhir Anda",
 	ACCOUNT_NOT_FOUND: "Akun tidak ditemukan",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"id-ID": ID_ID,

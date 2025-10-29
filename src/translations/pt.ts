@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const PT_BR = {
+export const PT_BR = createTranslationObject("pt-BR", {
 	// User related errors
 	USER_NOT_FOUND: "Usuário não encontrado",
 	FAILED_TO_CREATE_USER: "Falha ao criar usuário",
@@ -10,7 +10,6 @@ export const PT_BR = {
 	USER_ALREADY_HAS_PASSWORD:
 		"Usuário já possui uma senha. Forneça-a para excluir a conta.",
 	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Usuário já existe. Use outro email.",
-
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Falha ao criar sessão",
@@ -40,9 +39,9 @@ export const PT_BR = {
 	EMAIL_CAN_NOT_BE_UPDATED: "Email não pode ser atualizado",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Você não pode desvincular sua última conta",
 	ACCOUNT_NOT_FOUND: "Conta não encontrada",
-} satisfies ErrorCodesType;
+});
 
-export const PT_PT = {
+export const PT_PT = createTranslationObject("pt-PT", {
 	// User related errors
 	USER_NOT_FOUND: "Utilizador não encontrado",
 	FAILED_TO_CREATE_USER: "Falha ao criar utilizador",
@@ -51,7 +50,8 @@ export const PT_PT = {
 	USER_EMAIL_NOT_FOUND: "E-mail do utilizador não encontrado",
 	USER_ALREADY_HAS_PASSWORD:
 		"Utilizador já possui uma palavra-passe. Forneça-a para eliminar a conta.",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Utilizador já existe. Use outro e-mail.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Utilizador já existe. Use outro e-mail.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Falha ao criar sessão",
@@ -81,7 +81,7 @@ export const PT_PT = {
 	EMAIL_CAN_NOT_BE_UPDATED: "E-mail não pode ser actualizado",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Não pode desassociar a sua última conta",
 	ACCOUNT_NOT_FOUND: "Conta não encontrada",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"pt-BR": PT_BR,

@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const SV_SE = {
+export const SV_SE = createTranslationObject("sv-SE", {
 	// User related errors
 	USER_NOT_FOUND: "Användaren hittades inte",
 	FAILED_TO_CREATE_USER: "Lyckades inte skapa användare",
@@ -8,7 +8,8 @@ export const SV_SE = {
 	USER_ALREADY_EXISTS: "Användaren finns redan",
 	USER_EMAIL_NOT_FOUND: "Användarens e-post hittades inte",
 	USER_ALREADY_HAS_PASSWORD: "Användaren har redan ett lösenord",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Användaren finns redan. Använd en annan e-postadress.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Användaren finns redan. Använd en annan e-postadress.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Lyckades inte skapa session",
@@ -37,7 +38,7 @@ export const SV_SE = {
 	EMAIL_CAN_NOT_BE_UPDATED: "E-postadress kan inte uppdateras",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Du kan inte koppla bort det sista kontot",
 	ACCOUNT_NOT_FOUND: "Konto hittades inte",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"sv-SE": SV_SE,

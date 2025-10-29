@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const FR_FR = {
+export const FR_FR = createTranslationObject("fr-FR", {
 	// User related errors
 	USER_NOT_FOUND: "Utilisateur non trouvé",
 	FAILED_TO_CREATE_USER: "Échec de la création de l'utilisateur",
@@ -9,7 +9,8 @@ export const FR_FR = {
 	USER_EMAIL_NOT_FOUND: "E-mail de l'utilisateur non trouvé",
 	USER_ALREADY_HAS_PASSWORD:
 		"L'utilisateur a déjà un mot de passe. Veuillez le fournir pour supprimer le compte.",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Utilisateur déjà existant. Utilisez un autre e-mail.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Utilisateur déjà existant. Utilisez un autre e-mail.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Échec de la création de la session",
@@ -41,7 +42,7 @@ export const FR_FR = {
 	FAILED_TO_UNLINK_LAST_ACCOUNT:
 		"Vous ne pouvez pas dissocier votre dernier compte",
 	ACCOUNT_NOT_FOUND: "Compte non trouvé",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"fr-FR": FR_FR,

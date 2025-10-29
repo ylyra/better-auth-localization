@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const AR_SA = {
+export const AR_SA = createTranslationObject("ar-SA", {
 	// User related errors
 	USER_NOT_FOUND: "المستخدم غير موجود",
 	FAILED_TO_CREATE_USER: "فشل في إنشاء حساب المستخدم",
@@ -9,7 +9,8 @@ export const AR_SA = {
 	USER_EMAIL_NOT_FOUND: "البريد الإلكتروني للمستخدم غير موجود",
 	USER_ALREADY_HAS_PASSWORD:
 		"المستخدم لديه كلمة مرور بالفعل. يرجى إدخال كلمة المرور الحالية لحذف الحساب.",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "المستخدم موجود مسبقًا. استخدم بريدًا إلكترونيًا آخر.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"المستخدم موجود مسبقًا. استخدم بريدًا إلكترونيًا آخر.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "فشل في إنشاء الجلسة",
@@ -39,7 +40,7 @@ export const AR_SA = {
 	EMAIL_CAN_NOT_BE_UPDATED: "لا يمكن تحديث البريد الإلكتروني",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "لا يمكن إلغاء ربط الحساب الأخير",
 	ACCOUNT_NOT_FOUND: "الحساب غير موجود",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"ar-SA": AR_SA,

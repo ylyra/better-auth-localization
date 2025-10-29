@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const NL_NL_INFORMAL = {
+export const NL_NL_INFORMAL = createTranslationObject("nl-NL", {
 	// User related errors
 	USER_NOT_FOUND: "Gebruiker niet gevonden",
 	FAILED_TO_CREATE_USER: "Gebruiker kon niet worden aangemaakt",
@@ -9,7 +9,8 @@ export const NL_NL_INFORMAL = {
 	USER_EMAIL_NOT_FOUND: "E-mailadres van gebruiker niet gevonden",
 	USER_ALREADY_HAS_PASSWORD:
 		"Gebruiker heeft al een wachtwoord. Voer het in om het account te verwijderen.",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Gebruiker bestaat al. Gebruik een ander e-mailadres.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Gebruiker bestaat al. Gebruik een ander e-mailadres.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Sessie kon niet worden aangemaakt",
@@ -39,12 +40,12 @@ export const NL_NL_INFORMAL = {
 	EMAIL_CAN_NOT_BE_UPDATED: "E-mailadres kon niet worden bijgewerkt",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Je kunt het laatste account niet ontkoppelen",
 	ACCOUNT_NOT_FOUND: "Account niet gevonden",
-} satisfies ErrorCodesType;
+});
 
-export const NL_NL_FORMAL = {
+export const NL_NL_FORMAL = createTranslationObject("nl-NL-formal", {
 	...NL_NL_INFORMAL,
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "U kunt het laatste account niet ontkoppelen",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"nl-NL": NL_NL_INFORMAL,

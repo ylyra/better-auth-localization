@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const MR_MR = {
+export const MR_MR = createTranslationObject("mr-MR", {
 	// User related errors
 	USER_NOT_FOUND: "वापरकर्ता सापडला नाही",
 	FAILED_TO_CREATE_USER: "वापरकर्ता तयार करण्यात अयशस्वी",
@@ -9,13 +9,13 @@ export const MR_MR = {
 	USER_EMAIL_NOT_FOUND: "वापरकर्त्याचा ईमेल सापडला नाही",
 	USER_ALREADY_HAS_PASSWORD:
 		"वापरकर्त्याने आधीच पासवर्ड सेट केला आहे. खाते हटवण्यासाठी कृपया तो पासवर्ड द्या.",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "वापरकर्ता आधीच अस्तित्वात आहे. दुसरा ईमेल वापरा.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"वापरकर्ता आधीच अस्तित्वात आहे. दुसरा ईमेल वापरा.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "सत्र तयार करण्यात अयशस्वी",
 	FAILED_TO_GET_SESSION: "सत्र मिळवण्यात अयशस्वी",
-	SESSION_EXPIRED:
-		"सत्राची मुदत संपली आहे. ही कृती करण्यासाठी कृपया पुन्हा लॉगिन करा.",
+	SESSION_EXPIRED: "सत्राची मुदत संपली आहे. ही कृती करण्यासाठी कृपया पुन्हा लॉगिन करा.",
 
 	// Authentication errors
 	INVALID_PASSWORD: "अवैध पासवर्ड",
@@ -39,7 +39,7 @@ export const MR_MR = {
 	EMAIL_CAN_NOT_BE_UPDATED: "ईमेल अद्यतनित करता येत नाही",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "शेवटचे खाते अनलिंक करण्यात अयशस्वी",
 	ACCOUNT_NOT_FOUND: "खाते सापडले नाही",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"mr-MR": MR_MR,

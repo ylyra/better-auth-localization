@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const HI_HI = {
+export const HI_HI = createTranslationObject("hi-HI", {
 	// User related errors
 	USER_NOT_FOUND: "उपयोगकर्ता नहीं मिला",
 	FAILED_TO_CREATE_USER: "उपयोगकर्ता बनाने में विफल",
@@ -9,7 +9,8 @@ export const HI_HI = {
 	USER_EMAIL_NOT_FOUND: "उपयोगकर्ता का ईमेल नहीं मिला",
 	USER_ALREADY_HAS_PASSWORD:
 		"उपयोगकर्ता ने पहले से पासवर्ड सेट किया है। खाता हटाने के लिए कृपया वह पासवर्ड प्रदान करें।",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "उपयोगकर्ता पहले से मौजूद है। दूसरा ईमेल उपयोग करें।",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"उपयोगकर्ता पहले से मौजूद है। दूसरा ईमेल उपयोग करें।",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "सत्र बनाने में विफल",
@@ -39,7 +40,7 @@ export const HI_HI = {
 	EMAIL_CAN_NOT_BE_UPDATED: "ईमेल अपडेट नहीं किया जा सकता",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "आखिरी खाते का लिंक हटाने में विफल",
 	ACCOUNT_NOT_FOUND: "खाता नहीं मिला",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"hi-HI": HI_HI,

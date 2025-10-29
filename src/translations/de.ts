@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const DE_DE_INFORMAL = {
+export const DE_DE_INFORMAL = createTranslationObject("de-DE", {
 	// User related errors
 	USER_NOT_FOUND: "Benutzer nicht gefunden",
 	FAILED_TO_CREATE_USER: "Benutzer konnte nicht erstellt werden",
@@ -9,7 +9,8 @@ export const DE_DE_INFORMAL = {
 	USER_EMAIL_NOT_FOUND: "E-Mail-Adresse des Benutzers nicht gefunden",
 	USER_ALREADY_HAS_PASSWORD:
 		"Benutzer hat bereits ein Passwort. Bitte gib es ein, um das Konto zu löschen.",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Benutzer existiert bereits. Verwende eine andere E-Mail-Adresse.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Benutzer existiert bereits. Verwende eine andere E-Mail-Adresse.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Sitzung konnte nicht erstellt werden",
@@ -40,17 +41,18 @@ export const DE_DE_INFORMAL = {
 	EMAIL_CAN_NOT_BE_UPDATED: "E-Mail-Adresse konnte nicht aktualisiert werden",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Du kannst das letzte Konto nicht trennen",
 	ACCOUNT_NOT_FOUND: "Konto nicht gefunden",
-} satisfies ErrorCodesType;
+});
 
-export const DE_DE_FORMAL = {
+export const DE_DE_FORMAL = createTranslationObject("de-DE-formal", {
 	...DE_DE_INFORMAL,
 	USER_ALREADY_HAS_PASSWORD:
 		"Der Benutzer hat bereits ein Passwort. Bitte geben Sie es ein, um das Konto zu löschen.",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Benutzer existiert bereits. Verwenden Sie eine andere E-Mail-Adresse.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Benutzer existiert bereits. Verwenden Sie eine andere E-Mail-Adresse.",
 	SESSION_EXPIRED:
 		"Sitzung abgelaufen. Bitte melden Sie sich erneut an, um diese Aktion auszuführen.",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Sie können das letzte Konto nicht trennen",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"de-DE": DE_DE_INFORMAL,

@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const DA_DK = {
+export const DA_DK = createTranslationObject("da-DK", {
 	// User related errors
 	USER_NOT_FOUND: "Brugeren blev ikke fundet",
 	FAILED_TO_CREATE_USER: "Fejl under oprettelse af bruger",
@@ -8,7 +8,8 @@ export const DA_DK = {
 	USER_ALREADY_EXISTS: "Brugeren eksisterer allerede",
 	USER_EMAIL_NOT_FOUND: "Brugerens e-mail blev ikke fundet",
 	USER_ALREADY_HAS_PASSWORD: "Brugeren har allerede en adgangskode",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "Brugeren eksisterer allerede. Brug en anden e-mail.",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"Brugeren eksisterer allerede. Brug en anden e-mail.",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "Fejl under oprettelse af session",
@@ -37,7 +38,7 @@ export const DA_DK = {
 	EMAIL_CAN_NOT_BE_UPDATED: "E-mailen kan ikke opdateres",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "Fejl ved afkobling af sidste konto",
 	ACCOUNT_NOT_FOUND: "Kontoen blev ikke fundet",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"da-DK": DA_DK,

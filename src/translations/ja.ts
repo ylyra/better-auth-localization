@@ -1,6 +1,6 @@
-import type { ErrorCodesType } from "../types";
+import { createTranslationObject } from "../utils/create-translation-object";
 
-export const JA_JP = {
+export const JA_JP = createTranslationObject("ja-JP", {
 	// User related errors
 	USER_NOT_FOUND: "ユーザーが見つかりません",
 	FAILED_TO_CREATE_USER: "ユーザーの作成に失敗しました",
@@ -9,7 +9,8 @@ export const JA_JP = {
 	USER_EMAIL_NOT_FOUND: "ユーザーのメールアドレスが見つかりません",
 	USER_ALREADY_HAS_PASSWORD:
 		"ユーザーは既にパスワードを設定しています。アカウントを削除するには、そのパスワードを入力してください。",
-	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL: "ユーザーは既に存在します。別のメールアドレスを使用してください。",
+	USER_ALREADY_EXISTS_USE_ANOTHER_EMAIL:
+		"ユーザーは既に存在します。別のメールアドレスを使用してください。",
 
 	// Session related errors
 	FAILED_TO_CREATE_SESSION: "セッションの作成に失敗しました",
@@ -39,7 +40,7 @@ export const JA_JP = {
 	EMAIL_CAN_NOT_BE_UPDATED: "メールアドレスを更新できません",
 	FAILED_TO_UNLINK_LAST_ACCOUNT: "最後のアカウントの連携を解除できません",
 	ACCOUNT_NOT_FOUND: "アカウントが見つかりません",
-} satisfies ErrorCodesType;
+});
 
 export const LOCALES = {
 	"ja-JP": JA_JP,
