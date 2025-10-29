@@ -1,6 +1,6 @@
 # Better Auth Localization Plugin
 
-A localization plugin for [Better Auth](https://github.com/better-auth/better-auth) that automatically translates error messages.
+A localization plugin for [Better Auth](https://github.com/better-auth/better-auth) that automatically translates error messages from the core library and official plugins.
 ![ezgif-6723e2cdfd4aa9](https://github.com/user-attachments/assets/af185757-1772-4022-9820-eb437d23c86f)
 
 ## Features
@@ -136,17 +136,36 @@ Currently supported languages:
 - 🇮🇷 **Persian/Farsi (fa-IR)** - ✅ Complete (Thanks @Yasser5711)
 - 🇷🇺 **Russian (ru-RU)** - ✅ Complete (Thanks @draneone)
 - 🇮🇳 **Marathi (mr-MR)** - ✅ Complete (Thanks @OutOfBoundCats)
+- 🇩🇰 **Danish (da-DK)** - ✅ Complete (Thanks @BjornFrancke)
+- 🇷🇴 **Romanian (ro-RO)** - ✅ Complete (Thanks @danielavornic)
+- 🇮🇶 **Kurdish Sorani (ckb-IQ)** - ✅ Complete (Thanks @didar-dev)
 
 ## Built-in Translations
 
-The plugin comes with built-in translations for all Better Auth error codes:
+The plugin comes with built-in translations for all Better Auth error codes, including:
 
+**Core Library:**
 - User-related errors (USER_NOT_FOUND, USER_ALREADY_EXISTS, etc.)
 - Session errors (SESSION_EXPIRED, FAILED_TO_CREATE_SESSION, etc.)
 - Authentication errors (INVALID_PASSWORD, INVALID_EMAIL, etc.)
 - Password validation (PASSWORD_TOO_SHORT, PASSWORD_TOO_LONG)
 - Social authentication errors
 - Account management errors
+
+**Official Plugins:**
+- Admin plugin error messages
+- Anonymous authentication plugin
+- API Key plugin
+- Device authorization plugin
+- Email OTP plugin
+- Generic OAuth plugin
+- Have I Been Pwned plugin
+- Multi-session plugin
+- Organization plugin
+- Passkey plugin
+- Phone number plugin
+- Two-factor authentication plugin
+- Username plugin
 
 For a complete and specific list, refer to the [Better Auth documentation](https://github.com/better-auth/better-auth/blob/canary/packages/core/src/error/codes.ts).
 
@@ -166,7 +185,7 @@ This repo auto-generates the translations index to avoid PR conflicts when multi
    # or
    yarn generate:locale
    ```
-2. Select your desired locale from the interactive list (e.g., `nl_NL`, `fr_CA`, `es_MX`)
+2. Input your desired locale (e.g., `nl_NL`, `fr_CA`, `es_MX`)
 3. The script will automatically:
    - Create the main translation file with the correct structure
    - Generate plugin-specific translation files with proper types
