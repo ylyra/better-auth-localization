@@ -58,7 +58,7 @@ async function addLocaleToParentFile(newLocale) {
 		return;
 	}
 
-	const constantLine = `export const ${newConstant} = createTranslationObject("${newHyphenated}");`;
+	const constantLine = `export const ${newConstant} = createTranslationObject("${newHyphenated}", {});`;
 
 	const lines = content.split("\n");
 	let insertIndex = -1;
